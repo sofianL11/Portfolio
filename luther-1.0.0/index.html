@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="no-js ss-preload" lang="en">
+<head>
+<!--- basic page needs
+    ================================================== -->
+<meta charset="utf-8"/>
+<title>Sofian Lyadi</title>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<!-- mobile specific metas
+    ================================================== -->
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- CSS
+    ================================================== -->
+<link href="css/vendor.css" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<!-- favicons
+    ================================================== -->
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="site.webmanifest" rel="manifest"/>
+<style>
+/* ...existing code... */
+.skills-logos {
+    justify-content: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+.skill-logo {
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1), filter 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: none;
+    border-radius: 12px;
+    cursor: pointer;
+    /* Ensure all logos are the same size */
+    min-width: 56px;
+    min-height: 56px;
+    max-width: 56px;
+    max-height: 56px;
+    box-sizing: border-box;
+}
+.skill-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: grayscale(1) brightness(0.8);
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1), filter 0.25s;
+    display: block;
+    margin: auto;
+}
+.skill-logo:hover img,
+.skill-logo:focus img {
+    filter: grayscale(0) brightness(1.1) drop-shadow(0 2px 8px #eabe7c55);
+    transform: scale(1.18);
+}
+</style>
+</head>
+<body id="top">
+<!-- # preloader
+    ================================================== -->
+<div id="preloader">
+<div id="loader">
+</div>
+</div>
+<!-- # page wrap
+    ================================================== -->
+<div class="s-pagewrap">
+<div class="circles">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+<!-- ## site header 
+        ================================================== -->
+<header class="s-header">
+<div class="header-mobile">
+<span class="mobile-home-link"><a href="index.html">Sofian Lyadi</a></span>
+<a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+</div>
+<div class="row wide main-nav-wrap">
+<nav class="column lg-12 main-nav">
+<ul>
+<li><a class="home-link" href="index.html">Mon portfolio</a></li>
+<li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
+<li><a class="smoothscroll" href="#about">À propos</a></li>
+<li><a class="smoothscroll" href="#works">Mes Projets</a></li>
+<li><a class="smoothscroll" href="#contact">Me contacter</a></li>
+</ul>
+</nav>
+</div>
+</header> <!-- end s-header -->
+<!-- ## main content
+        ==================================================- -->
+<main class="s-content">
+<!-- ### intro
+            ================================================== -->
+<section class="s-intro target-section" id="intro">
+<div class="row intro-content wide">
+<div class="column">
+<div class="text-pretitle with-line">Bienvenue</div>
+<h1 class="text-huge-title" style="font-size:3.7rem;line-height:1.13;">
+    Je suis Sofian Lyadi,
+    étudiant en informatique,
+    passionné par la donnée,
+    le web et les bases.
+</h1>
+</div>
+<ul class="intro-social">
+<li><a href="#0">LinkedIn</a></li>
+</ul>
+</div> <!-- end intro content -->
+<a class="intro-scrolldown smoothscroll" href="#about">
+<svg clip-rule="evenodd" fill-rule="evenodd" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"></path></svg>
+</a>
+</section> <!-- end s-intro -->
+<!-- ### about
+            ================================================== -->
+<section class="s-about target-section" id="about">
+<div class="row about-info wide" data-animate-block="">
+<div class="column lg-6 md-12 about-info__pic-block">
+    <img alt="" class="about-info__pic" data-animate-el="" src="logos/photoSofian.png" srcset="logos/photoSofian.png 1x, logos/photoSofian.png 2x" style="object-fit: cover; width: 100%; max-width: 420px; aspect-ratio: 1/1; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.15);"/>
+</div>
+<div class="column lg-6 md-12">
+<div class="about-info__text">
+<h2 class="text-pretitle with-line" data-animate-el="">À propos de moi</h2>
+<p class="attention-getter" data-animate-el="">Étudiant en BUT Informatique à l’IUT Lyon 1, passionné par les bases de données, le développement web et la visualisation de données. Curieux, rigoureux et créatif, je cherche à concevoir des solutions efficaces et durables à travers le code.</p>
+<a class="btn btn--medium u-fullwidth" data-animate-el="" href="CV_alternance_LS_2025.pdf">Télécharger mon CV</a>
+</div>
+</div>
+</div> <!-- about-info -->
+<div class="row about-expertise" data-animate-block="">
+<div class="column lg-12">
+<h2 class="text-pretitle" data-animate-el="">Compétences</h2>
+<div class="skills-logos" data-animate-el="" style="display: flex; flex-direction: column; gap: 32px; align-items: flex-start; margin-top: 2rem;">
+    <!-- Data & BI -->
+    <div style="display: flex; align-items: center; gap: 28px;">
+        <span style="font-weight:600; min-width:110px; color:#eabe7c;">Data & BI</span>
+        <div class="skill-logo" title="Power BI">
+            <img src="logos/powerbi.png" alt="Power BI" />
+        </div>
+        <div class="skill-logo" title="PL/SQL">
+            <img src="logos/plsql.png" alt="PL/SQL" />
+        </div>
+        <div class="skill-logo" title="SQL">
+            <img src="logos/sql.png" alt="SQL" />
+        </div>
+        <div class="skill-logo" title="MongoDB">
+            <img src="logos/mongodb.webp" alt="MongoDB" />
+        </div>
+    </div>
+    <!-- Développement Web -->
+    <div style="display: flex; align-items: center; gap: 28px;">
+        <span style="font-weight:600; min-width:110px; color:#eabe7c;">Dév. Web</span>
+        <div class="skill-logo" title="HTML5">
+            <img src="logos/html.png" alt="HTML5" />
+        </div>
+        <div class="skill-logo" title="CSS3">
+            <img src="logos/css.png" alt="CSS3" />
+        </div>
+        <div class="skill-logo" title="JavaScript">
+            <img src="logos/js.png" alt="JavaScript" />
+        </div>
+        <div class="skill-logo" title="PHP">
+            <img src="logos/php.png" alt="PHP" />
+        </div>
+        <div class="skill-logo" title="Symfony">
+            <img src="logos/symfony.svg" alt="Symfony" />
+        </div>
+    </div>
+    <!-- Développement Logiciel -->
+    <div style="display: flex; align-items: center; gap: 28px;">
+        <span style="font-weight:600; min-width:110px; color:#eabe7c;">Dév. Logiciel</span>
+        <div class="skill-logo" title="C">
+            <img src="logos/c.png" alt="C" />
+        </div>
+        <div class="skill-logo" title="Java">
+            <img src="logos/java.png" alt="Java" />
+        </div>
+        <div class="skill-logo" title="Bash">
+            <img src="logos/bash.png" alt="Bash" />
+        </div>
+    </div>
+
+    </div>
+</div>
+</div> <!-- end about-expertise -->
+<div class="row about-timelines" data-animate-block="">
+<div class="column lg-6 tab-12">
+<h2 class="text-pretitle" data-animate-el="">
+    Expérience
+</h2>
+<div class="timeline" data-animate-el="">
+    <div class="timeline__block">
+        <div class="timeline__bullet"></div>
+        <div class="timeline__header">
+            <h4 class="timeline__title">Stage - Refonte logiciel</h4>
+            <h5 class="timeline__meta">Codeex Service</h5>
+            <p class="timeline__timeframe">05/05/2025 – 27/06/2025</p>
+        </div>
+        <div class="timeline__desc">
+            <p>Stage de refonte d'un logiciel interne, amélioration de l'ergonomie et des fonctionnalités pour le service Codeex.</p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="column lg-6 tab-12">
+<h2 class="text-pretitle" data-animate-el="">
+                            Education
+                        </h2>
+<div class="timeline" data-animate-el=""><div class="timeline__block"><div class="timeline__bullet"></div><div class="timeline__header"><h4 class="timeline__title">BUT Informatique – IUT Lyon 1</h4><h5 class="timeline__meta">Développement, données, réseaux</h5><p class="timeline__timeframe">2023–2026</p></div><div class="timeline__desc"><p>Architecture logicielle, qualité, cryptographie, communication, anglais.</p></div></div><div class="timeline__block"><div class="timeline__bullet"></div><div class="timeline__header"><h4 class="timeline__title">Bac STI2D – La Martinière Diderot</h4><h5 class="timeline__meta">Mention Bien</h5><p class="timeline__timeframe">2023</p></div><div class="timeline__desc"><p>Sciences et technologies de l’industrie et du développement durable.</p></div></div></div> <!-- end timeline -->
+</div> <!-- end column -->
+</div> <!-- end about-timelines -->
+</section> <!-- end s-about -->
+<!-- ### works
+            ================================================== -->
+<section class="s-works target-section" id="works">
+<div class="row works-portfolio">
+<div class="column lg-12" data-animate-block="">
+<h2 class="text-pretitle" data-animate-el="">
+    Projets récents
+</h2>
+<p class="h1" data-animate-el="">
+    Voici quelques-uns de mes projets préférés réalisés récemment. 
+</p>
+<ul class="folio-list row block-lg-one-half block-stack-on-1000">
+    <!-- Power BI -->
+    <li class="folio-list__item column" data-animate-el="">
+        <a class="folio-list__item-link" href="#modal-powerbi">
+            <div class="folio-list__item-pic">
+                <img alt="Visualisation Power BI" src="logos/powBI.png" srcset="logos/powBI.png 1x, logos/powBI.png 2x"/>
+            </div>
+            <div class="folio-list__item-text">
+                <div class="folio-list__item-cat">
+                    Data Visualisation
+                </div>
+                <div class="folio-list__item-title">
+                    Visualisation Power BI
+                </div>
+            </div>
+        </a>
+        <a class="folio-list__proj-link" href="#" title="project link">
+            <svg fill="none" height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+        </a>
+    </li>
+    <!-- Buddy Budget -->
+    <li class="folio-list__item column" data-animate-el="">
+        <a class="folio-list__item-link" href="#modal-buddybudget">
+            <div class="folio-list__item-pic">
+                <img alt="Projet Buddy Budget" src="logos/saes4.png" srcset="logos/saes4.png 1x, logos/saes4.png 2x"/>
+            </div>
+            <div class="folio-list__item-text">
+                <div class="folio-list__item-cat">
+                    Application Web
+                </div>
+                <div class="folio-list__item-title">
+                    Projet Buddy Budget
+                </div>
+            </div>
+        </a>
+        <a class="folio-list__proj-link" href="#" title="project link">
+            <svg fill="none" height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+        </a>
+    </li>
+    <!-- Therapeutes -->
+    <li class="folio-list__item column" data-animate-el="">
+        <a class="folio-list__item-link" href="#modal-therapeutes">
+            <div class="folio-list__item-pic">
+                <img alt="Base de données thérapeutes" src="logos/thera.png" srcset="logos/thera.png 1x, logos/thera.png 2x"/>
+            </div>
+            <div class="folio-list__item-text">
+                <div class="folio-list__item-cat">
+                    Oracle SQL
+                </div>
+                <div class="folio-list__item-title">
+                    Base de données thérapeutes
+                </div>
+            </div>
+        </a>
+        <a class="folio-list__proj-link" href="#" title="project link">
+            <svg fill="none" height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+        </a>
+    </li>
+    <!-- Campus Vert -->
+    <li class="folio-list__item column" data-animate-el="">
+        <a class="folio-list__item-link" href="#modal-campusvert">
+            <div class="folio-list__item-pic">
+                <img alt="Campus Vert" src="logos/saes1.png" srcset="logos/saes1.png 1x, logos/saes1.png 2x"/>
+            </div>
+            <div class="folio-list__item-text">
+                <div class="folio-list__item-cat">
+                    Développement Web
+                </div>
+                <div class="folio-list__item-title">
+                    Campus Vert
+                </div>
+            </div>
+        </a>
+        <a class="folio-list__proj-link" href="#" title="project link">
+            <svg fill="none" height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+        </a>
+    </li>
+    <!-- Refonte Logiciel Codeex -->
+    <li class="folio-list__item column" data-animate-el="">
+        <a class="folio-list__item-link" href="#modal-codeex">
+            <div class="folio-list__item-pic">
+                <img alt="Refonte logiciel Codeex" src="logos/projet5.png" srcset="logos/projet5.png 1x, logos/projet5.png 2x"/>
+            </div>
+            <div class="folio-list__item-text">
+                <div class="folio-list__item-cat">
+                    Logiciel &amp; BDD
+                </div>
+                <div class="folio-list__item-title">
+                    Refonte logiciel médecine douce
+                </div>
+            </div>
+        </a>
+        <a class="folio-list__proj-link" href="#" title="project link">
+            <svg fill="none" height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+        </a>
+    </li>
+</ul>
+<!-- Modal Templates Popup
+                    -------------------------------------------- -->
+<!-- Supprime les modals #modal-01 à #modal-06, garde uniquement les modals personnalisés -->
+<div hidden="" id="modal-powerbi">
+    <div class="modal-popup">
+        <img alt="Visualisation Power BI" src="logos/powBI.png"/>
+        <div class="modal-popup__desc">
+            <h5>Visualisation Power BI</h5>
+            <p>
+                Aide à la décision via SQL + Power BI (commandes, ventes, clients, profits...).<br>
+                Création de tableaux de bord interactifs pour l’analyse des performances commerciales et la visualisation des données clés.
+            </p>
+            <ul class="modal-popup__cat">
+                <li>Power BI</li>
+                <li>SQL</li>
+                <li>Data Visualisation</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div hidden="" id="modal-buddybudget">
+    <div class="modal-popup">
+        <img alt="Projet Buddy Budget" src="logos/saes4.png"/>
+        <div class="modal-popup__desc">
+            <h5>Projet Buddy Budget</h5>
+            <p>
+                Buddy Budget est une application web conçue dans le cadre d’une SAE de développement visant à répondre à un enjeu majeur : la gestion budgétaire. 
+                Dans un contexte où de nombreuses personnes rencontrent des difficultés à gérer efficacement leurs finances personnelles, Buddy Budget apporte une solution intuitive. 
+                L’application permet aux utilisateurs de planifier leur budget, suivre leurs dépenses en temps réel, et analyser leur comportement financier. 
+                En facilitant la prise de décisions éclairées, Buddy Budget vise à réduire le stress financier, éviter le surendettement, et promouvoir une meilleure stabilité économique au quotidien.
+            </p>
+            <ul class="modal-popup__cat">
+                <li>Application Web</li>
+                <li>Gestion budgétaire</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div hidden="" id="modal-therapeutes">
+    <div class="modal-popup">
+        <img alt="Base de données thérapeutes" src="logos/thera.png"/>
+        <div class="modal-popup__desc">
+            <h5>Base de données thérapeutes</h5>
+            <p>
+                Dans cette SAE, nous avons conçu une base de données Oracle pour un centre de formation médicale. 
+                Le projet a couvert la création du MCD sur PowerDesigner, sa transformation en MPD, la génération des tables dans SQL Developer, 
+                l’implémentation des données et l’écriture de requêtes SQL adaptées aux besoins du client.
+            </p>
+            <ul class="modal-popup__cat">
+                <li>Oracle SQL</li>
+                <li>Base de données</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div hidden="" id="modal-campusvert">
+    <div class="modal-popup">
+        <img alt="Campus Vert" src="logos/saes1.png"/>
+        <div class="modal-popup__desc">
+            <h5>Campus Vert</h5>
+            <p>
+                Dans le cadre d’une SAE, nous avons développé Le Campus Vert, un site web en HTML/CSS visant à promouvoir des modes de déplacement éco-responsables sur le campus de La Doua. 
+                Ce projet sensibilise les étudiants à l’impact environnemental de leurs choix de mobilité, tout en proposant des alternatives comme le vélo, la marche ou les transports doux. 
+                À travers une interface simple et des visuels clairs, le site informe, propose et engage la communauté universitaire à adopter un mode de vie plus durable.
+            </p>
+            <ul class="modal-popup__cat">
+                <li>Développement Web</li>
+                <li>HTML/CSS</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div hidden="" id="modal-codeex">
+    <div class="modal-popup">
+        <img alt="Refonte logiciel Codeex" src="logos/projet5.png"/>
+        <div class="modal-popup__desc">
+            <h5>Refonte d’un logiciel de médecine douce – Codeex Services</h5>
+            <ul class="modal-popup__cat">
+                <li>WinDev</li>
+                <li>WLangage</li>
+                <li>SQL</li>
+                <li>HFSQL</li>
+            </ul>
+            <p>
+                <strong>Durée :</strong> 2 mois (mai - juin 2025)
+            </p>
+            <ol>
+                <li>
+                    <strong>Amélioration de l’interface graphique :</strong><br>
+                    Refonte complète de l’interface d’un logiciel médical limitant les consultations à 20 par patient. Implémentation d’un système dynamique avec une fenêtre dédiée aux consultations et un historique optimisé, rendant l’application plus fluide, ergonomique et illimitée en nombre de consultations.
+                </li>
+                <li>
+                    <strong>Refonte de la base de données :</strong><br>
+                    Refactorisation de la structure SQL en séparant les données clients, consultations et pathologies dans des tables dédiées. Résultat : une base plus performante, sécurisée (respect du RGPD) et facilement maintenable.
+                </li>
+                <li>
+                    <strong>Création d’une version démo avec système d’activation :</strong><br>
+                    Développement d’un système de version d’essai limitée à 7 jours, basé sur le numéro de série du disque dur. Conception d’un mini-logiciel pour générer et envoyer les clés d’activation, assurant un contrôle d’accès fiable.
+                </li>
+                <li>
+                    <strong>Configuration d’un installateur personnalisé :</strong><br>
+                    Création de modules d’installation via WDInst selon les besoins des clients (thérapies incluses ou non). L’installateur permet d’adapter le logiciel en fonction des fonctionnalités sélectionnées.
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+</div> <!-- end works-portfolio -->
+<section class="s-contact target-section" id="contact">
+    <div class="row contact-top">
+        <div class="column lg-12">
+        </div>
+    </div> <!-- end contact-top -->
+    <div class="row contact-bottom" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 64px; align-items: flex-start;">
+        <div class="column lg-4 md-6 tab-12 contact-block" >
+            <h3 class="text-pretitle">Me contacter</h3>
+            <div class="contact-links">
+                <span>
+                    <a class="mailtoui" href="mailto:sofianlyadi@mail.com" >sofianlyadi@gmail.com</a>
+                </span>
+                <span>
+                    <a href="tel:+33617275662">+33 6 17 27 56 62</a>
+                </span>
+            </div>
+        </div>
+        <div class="column lg-4 md-6 tab-12 contact-block" >
+            <h3 class="text-pretitle">Réseaux sociaux</h3>
+            <ul class="contact-social">
+                <li><a href="https://www.linkedin.com/in/sofian-l-925045297/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div> <!-- end contact-bottom -->
+</section> <!-- end contact -->
+
+</main> <!-- end s-content -->
+<!-- ## footer
+        ================================================== -->
+<footer class="s-footer">
+<div class="row" style="align-items: center; min-height: 70px;">
+    <div class="column ss-copyright" style="font-size: 1.05rem; padding: 10px 0;">
+        <span>© 2025 Sofian Lyadi. Tous droits réservés.</span>
+    </div>
+    <div class="ss-go-top" style="padding: 10px 0;">
+        <a class="smoothscroll" href="#top" title="Back to Top">
+            <svg clip-rule="evenodd" fill-rule="evenodd" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"></path></svg>
+        </a>
+    </div>
+</div>
+</footer> <!-- end s-footer -->
+</div> <!-- end -s-pagewrap -->
+<!-- Java Script
+    ================================================== -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
