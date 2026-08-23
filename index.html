@@ -1,492 +1,576 @@
 <!DOCTYPE html>
+<html lang="fr">
 
-<html class="no-js ss-preload" lang="en">
 <head>
-<!--- basic page needs
-    ================================================== -->
-<meta charset="utf-8"/>
-<title>Sofian Lyadi</title>
-<meta content="" name="description"/>
-<meta content="" name="author"/>
-<!-- mobile specific metas
-    ================================================== -->
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<!-- CSS
-    ================================================== -->
-<link href="css/vendor.css" rel="stylesheet"/>
-<link href="css/styles.css" rel="stylesheet"/>
-<!-- favicons
-    ================================================== -->
-<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="site.webmanifest" rel="manifest"/>
-<style>
-/* ...existing code... */
-.skills-logos {
-    justify-content: flex-start;
-    gap: 32px;
-    flex-wrap: wrap;
-}
-.skill-logo {
-    transition: transform 0.25s cubic-bezier(.4,2,.6,1), filter 0.25s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    background: none;
-    border-radius: 12px;
-    cursor: pointer;
-    /* Ensure all logos are the same size */
-    min-width: 56px;
-    min-height: 56px;
-    max-width: 56px;
-    max-height: 56px;
-    box-sizing: border-box;
-}
-.skill-logo img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    filter: grayscale(1) brightness(0.8);
-    transition: transform 0.25s cubic-bezier(.4,2,.6,1), filter 0.25s;
-    display: block;
-    margin: auto;
-}
-.skill-logo:hover img,
-.skill-logo:focus img {
-    filter: grayscale(0) brightness(1.1) drop-shadow(0 2px 8px #eabe7c55);
-    transform: scale(1.18);
-}
-</style>
+    <meta charset="utf-8" />
+
+    <meta name="description"
+        content="Portfolio de Sofian Lyadi, etudiant en 3eme annee de BUT Informatique, admis en Master Informatique a Lyon 2. Python, SQL, PostgreSQL, Power BI, Docker." />
+    <meta name="author" content="Sofian Lyadi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link href="css/portfolio.css" rel="stylesheet" />
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="favicon.ico" rel="icon" />
 </head>
+
 <body id="top">
-<!-- # preloader
-    ================================================== -->
-<div id="preloader">
-<div id="loader">
-</div>
-</div>
-<!-- # page wrap
-    ================================================== -->
-<div class="s-pagewrap">
-<div class="circles">
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-</div>
-<!-- ## site header 
-        ================================================== -->
-<header class="s-header">
-<div class="header-mobile">
-<span class="mobile-home-link"><a href="index.html">Sofian Lyadi</a></span>
-<a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
-</div>
-<div class="row wide main-nav-wrap">
-<nav class="column lg-12 main-nav">
-<ul>
-<li><a class="home-link" href="index.html">Mon portfolio</a></li>
-<li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
-<li><a class="smoothscroll" href="#about">À propos</a></li>
-<li><a class="smoothscroll" href="#works">Mes Projets</a></li>
-<li><a class="smoothscroll" href="#contact">Me contacter</a></li>
-</ul>
-</nav>
-</div>
-</header> <!-- end s-header -->
-<!-- ## main content
-        ==================================================- -->
-<main class="s-content">
-<!-- ### intro
-            ================================================== -->
-<section class="s-intro target-section" id="intro">
-<div class="row intro-content wide">
-<div class="column">
-<div class="text-pretitle with-line">Bienvenue</div>
-<h1 class="text-huge-title" style="font-size:3.7rem;line-height:1.13;">
-    Je suis Sofian Lyadi,
-    étudiant en informatique,
-    passionné par la donnée,
-    le web et les bases.
-</h1>
-</div>
-<ul class="intro-social">
-<li><a href="#0">LinkedIn</a></li>
-</ul>
-</div> <!-- end intro content -->
-<a class="intro-scrolldown smoothscroll" href="#about">
-<svg clip-rule="evenodd" fill-rule="evenodd" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"></path></svg>
-</a>
-</section> <!-- end s-intro -->
-<!-- ### about
-            ================================================== -->
-<section class="s-about target-section" id="about">
-<div class="row about-info wide" data-animate-block="">
-<div class="column lg-6 md-12 about-info__pic-block">
-    <img alt="" class="about-info__pic" data-animate-el="" src="images/photoSofian.png" srcset="images/photoSofian.png 1x, images/photoSofian.png 2x" style="object-fit: cover; width: 100%; max-width: 420px; aspect-ratio: 1/1; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.15);"/>
-</div>
-<div class="column lg-6 md-12">
-<div class="about-info__text">
-<h2 class="text-pretitle with-line" data-animate-el="">À propos de moi</h2>
-<p class="attention-getter" data-animate-el="">Étudiant en BUT Informatique à l’IUT Lyon 1, passionné par les bases de données, le développement web et la visualisation de données. Curieux, rigoureux et créatif, je cherche à concevoir des solutions efficaces et durables à travers le code.</p>
-<a class="btn btn--medium u-fullwidth" data-animate-el="" href="CV_alternance_LS_2025.pdf">Télécharger mon CV</a>
-</div>
-</div>
-</div> <!-- about-info -->
-<div class="row about-expertise" data-animate-block="">
-<div class="column lg-12">
-<h2 class="text-pretitle" data-animate-el="">Compétences</h2>
-<div class="skills-logos" data-animate-el="" style="display: flex; flex-direction: column; gap: 32px; align-items: flex-start; margin-top: 2rem;">
-    <!-- Data & BI -->
-    <div style="display: flex; align-items: center; gap: 28px;">
-        <span style="font-weight:600; min-width:110px; color:#eabe7c;">Data & BI</span>
-        <div class="skill-logo" title="Power BI">
-            <img src="logos/powerbi.png" alt="Power BI" />
-        </div>
-        <div class="skill-logo" title="PL/SQL">
-            <img src="logos/plsql.png" alt="PL/SQL" />
-        </div>
-        <div class="skill-logo" title="SQL">
-            <img src="logos/sql.png" alt="SQL" />
-        </div>
-        <div class="skill-logo" title="MongoDB">
-            <img src="logos/mongodb.webp" alt="MongoDB" />
-        </div>
+
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Sidebar gauche : email -->
+    <div class="sidebar-left">
+        <a href="mailto:sofianlyadi@gmail.com" class="sidebar-email">sofianlyadi@gmail.com</a>
     </div>
-    <!-- Développement Web -->
-    <div style="display: flex; align-items: center; gap: 28px;">
-        <span style="font-weight:600; min-width:110px; color:#eabe7c;">Dév. Web</span>
-        <div class="skill-logo" title="HTML5">
-            <img src="logos/html.png" alt="HTML5" />
-        </div>
-        <div class="skill-logo" title="CSS3">
-            <img src="logos/css.png" alt="CSS3" />
-        </div>
-        <div class="skill-logo" title="JavaScript">
-            <img src="logos/js.png" alt="JavaScript" />
-        </div>
-        <div class="skill-logo" title="PHP">
-            <img src="logos/php.png" alt="PHP" />
-        </div>
-        <div class="skill-logo" title="Symfony">
-            <img src="logos/symfony.svg" alt="Symfony" />
-        </div>
-    </div>
-    <!-- Développement Logiciel -->
-    <div style="display: flex; align-items: center; gap: 28px;">
-        <span style="font-weight:600; min-width:110px; color:#eabe7c;">Dév. Logiciel</span>
-        <div class="skill-logo" title="C">
-            <img src="logos/c.png" alt="C" />
-        </div>
-        <div class="skill-logo" title="Java">
-            <img src="logos/java.png" alt="Java" />
-        </div>
-        <div class="skill-logo" title="Bash">
-            <img src="logos/bash.png" alt="Bash" />
+
+    <!-- Sidebar droite : scroll indicator -->
+    <div class="sidebar-right">
+        <div class="scroll-track">
+            <div class="scroll-bar" id="scroll-bar"></div>
         </div>
     </div>
 
-    </div>
-</div>
-</div> <!-- end about-expertise -->
-<div class="row about-timelines" data-animate-block="">
-<div class="column lg-6 tab-12">
-<h2 class="text-pretitle" data-animate-el="">
-    Expérience
-</h2>
-<div class="timeline" data-animate-el="">
-    <div class="timeline__block">
-        <div class="timeline__bullet"></div>
-        <div class="timeline__header">
-            <h4 class="timeline__title">Stage - Refonte logiciel</h4>
-            <h5 class="timeline__meta">Codeex Service</h5>
-            <p class="timeline__timeframe">05/05/2025 – 27/06/2025</p>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu">
+            <span></span><span></span>
+        </button>
+        <div class="nav-overlay" id="nav-overlay">
+            <button class="nav-close" id="nav-close">&#10005;</button>
+            <div class="nav-overlay__inner">
+                <div class="nav-social">
+                    <h4 class="nav-col-title">SOCIAL</h4>
+                    <a href="https://www.linkedin.com/in/sofian-l-925045297/" target="_blank"
+                        rel="noopener">LinkedIn</a>
+                    <a href="CV_Lyadi_Sofian_.pdf" target="_blank" rel="noopener">Mon CV</a>
+                </div>
+                <div class="nav-links">
+                    <h4 class="nav-col-title">MENU</h4>
+                    <a href="#home" class="nav-link"><span class="nav-dot" style="background:#14b8c8"></span>Accueil</a>
+                    <a href="#about" class="nav-link"><span class="nav-dot" style="background:#0d7c8c"></span>A
+                        propos</a>
+                    <a href="#stack" class="nav-link"><span class="nav-dot" style="background:#14b8c8"></span>Stack</a>
+                    <a href="#projets" class="nav-link"><span class="nav-dot"
+                            style="background:#0d7c8c"></span>Projets</a>
+                    <a href="#parcours" class="nav-link"><span class="nav-dot"
+                            style="background:#14b8c8"></span>Parcours</a>
+                    <a href="#contact" class="nav-link"><span class="nav-dot"
+                            style="background:#0d7c8c"></span>Contact</a>
+                </div>
+            </div>
+            <div class="nav-overlay__footer">
+                <span class="nav-footer-label">CONTACT</span>
+                <a href="mailto:sofianlyadi@gmail.com">sofianlyadi@gmail.com</a>
+            </div>
         </div>
-        <div class="timeline__desc">
-            <p>Stage de refonte d'un logiciel interne, amélioration de l'ergonomie et des fonctionnalités pour Codeex Services.</p>
-        </div>
-    </div>
-</div>
-</div>
-<div class="column lg-6 tab-12">
-<h2 class="text-pretitle" data-animate-el="">
-                            Education
-                        </h2>
-<div class="timeline" data-animate-el=""><div class="timeline__block"><div class="timeline__bullet"></div><div class="timeline__header"><h4 class="timeline__title">BUT Informatique – IUT Lyon 1</h4><h5 class="timeline__meta">Développement, données, réseaux</h5><p class="timeline__timeframe">2023–2026</p></div><div class="timeline__desc"><p>Architecture logicielle, qualité, cryptographie, communication, anglais.</p></div></div><div class="timeline__block"><div class="timeline__bullet"></div><div class="timeline__header"><h4 class="timeline__title">Bac STI2D – La Martinière Diderot</h4><h5 class="timeline__meta">Mention Bien</h5><p class="timeline__timeframe">2023</p></div><div class="timeline__desc"><p>Sciences et technologies de l’industrie et du développement durable.</p></div></div></div> <!-- end timeline -->
-</div> <!-- end column -->
-</div> <!-- end about-timelines -->
-</section> <!-- end s-about -->
-<!-- ### works
-            ================================================== -->
-<section class="s-works target-section" id="works">
-<div class="row works-portfolio">
-<div class="column lg-12" data-animate-block="">
-<h2 class="text-pretitle" data-animate-el="">
-    Projets récents
-</h2>
-<p class="h1" data-animate-el="">
-    Voici quelques-uns de mes projets préférés réalisés récemment. 
-</p>
-<ul class="folio-list row block-lg-one-half block-stack-on-1000">
-    <!-- Power BI -->
-    <li class="folio-list__item column" data-animate-el="">
-        <a class="folio-list__item-link" href="#modal-powerbi">
-            <div class="folio-list__item-pic">
-                <img alt="Visualisation Power BI" src="images/powBI.png" srcset="images/powBI.png 1x, images/powBI.png 2x"/>
-            </div>
-            <div class="folio-list__item-text">
-                <div class="folio-list__item-cat">
-                    Data Visualisation
-                </div>
-                <div class="folio-list__item-title">
-                    Visualisation Power BI
+    </nav>
+
+    <main>
+
+        <!-- ================================================================ -->
+        <!-- HERO                                                              -->
+        <!-- ================================================================ -->
+        <section class="section-hero" id="home">
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    <span class="hero-title__accent">&Eacute;TUDIANT</span>
+                    <span class="hero-title__ink">DATA &amp; DEV</span>
+                </h1>
+                <p class="hero-desc">
+                    Salut&nbsp;! Je suis <strong>Sofian Lyadi</strong>. &Eacute;tudiant en 3&egrave;me ann&eacute;e de
+                    BUT
+                    Informatique,
+                    passionn&eacute; par la data &mdash; admis en Master Informatique &agrave; Lyon&nbsp;2.
+                    &Agrave; la recherche d&apos;un stage.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-cta">DISCUTONS</a>
+                    <span class="availability">
+                        <span class="availability-dot"></span>
+                        Disponible pour un stage
+                    </span>
                 </div>
             </div>
-        </a>
-        <a class="folio-list__proj-link" href="#" title="project link">
-            <svg fill="none" height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-        </a>
-    </li>
-    <!-- Buddy Budget -->
-    <li class="folio-list__item column" data-animate-el="">
-        <a class="folio-list__item-link" href="#modal-buddybudget">
-            <div class="folio-list__item-pic">
-                <img alt="Projet Buddy Budget" src="images/saes4.png" srcset="images/saes4.png 1x, images/saes4.png 2x"/>
-            </div>
-            <div class="folio-list__item-text">
-                <div class="folio-list__item-cat">
-                    Application Web
+            <div class="hero-right">
+                <div class="hero-stat">
+                    <span class="hero-stat__num" data-target="4" data-suffix="+">0+</span>
+                    <span class="hero-stat__label">Projets Data</span>
                 </div>
-                <div class="folio-list__item-title">
-                    Projet Buddy Budget
+                <div class="hero-stat">
+                    <span class="hero-stat__num" data-target="3" data-suffix="+">0+</span>
+                    <span class="hero-stat__label">Ann&eacute;es de BUT</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat__num" data-target="5" data-suffix="+">0+</span>
+                    <span class="hero-stat__label">Technologies</span>
                 </div>
             </div>
-        </a>
-        <a class="folio-list__proj-link" href="#" title="project link">
-            <svg fill="none" height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-        </a>
-    </li>
-    <!-- Therapeutes -->
-    <li class="folio-list__item column" data-animate-el="">
-        <a class="folio-list__item-link" href="#modal-therapeutes">
-            <div class="folio-list__item-pic">
-                <img alt="Base de données thérapeutes" src="images/thera.png" srcset="images/thera.png 1x, images/thera.png 2x"/>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- ABOUT                                                             -->
+        <!-- ================================================================ -->
+        <section class="section-about" id="about">
+            <blockquote class="about-quote">
+                Curieux, rigoureux, passionn&eacute; par la data &mdash; je construis mes comp&eacute;tences projet
+                apr&egrave;s
+                projet, admis en Master Informatique &agrave; Lyon&nbsp;2.
+            </blockquote>
+            <div class="about-divider">
+                <span class="about-divider__label">This is me.</span>
+                <hr class="about-hr">
             </div>
-            <div class="folio-list__item-text">
-                <div class="folio-list__item-cat">
-                    Oracle SQL
+            <div class="about-body">
+                <div class="about-name-col">
+                    <h2 class="about-name">Salut, je suis<br>Sofian.</h2>
                 </div>
-                <div class="folio-list__item-title">
-                    Base de données thérapeutes
-                </div>
-            </div>
-        </a>
-        <a class="folio-list__proj-link" href="#" title="project link">
-            <svg fill="none" height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-        </a>
-    </li>
-    <!-- Campus Vert -->
-    <li class="folio-list__item column" data-animate-el="">
-        <a class="folio-list__item-link" href="#modal-campusvert">
-            <div class="folio-list__item-pic">
-                <img alt="Campus Vert" src="images/saes1.png" srcset="images/saes1.png 1x, images/saes1.png 2x"/>
-            </div>
-            <div class="folio-list__item-text">
-                <div class="folio-list__item-cat">
-                    Développement Web
-                </div>
-                <div class="folio-list__item-title">
-                    Campus Vert
+                <div class="about-text-col">
+                    <p>Je suis actuellement en 3&egrave;me ann&eacute;e de BUT Informatique et je me sp&eacute;cialise
+                        dans la
+                        data&nbsp;: bases de donn&eacute;es, pipelines, visualisation. Admis en Master Informatique
+                        &agrave;
+                        l&apos;Universit&eacute; Lumi&egrave;re Lyon&nbsp;2.</p>
+                    <p>Curieux et rigoureux, je m&apos;appuie sur Python, SQL, Power BI, PostgreSQL et Docker pour
+                        construire des
+                        projets concrets et pr&eacute;parer mon avenir dans la data.</p>
+                    <a href="CV_Lyadi_Sofian_.pdf" target="_blank" rel="noopener"
+                        class="btn-outline">T&eacute;l&eacute;charger
+                        mon CV</a>
                 </div>
             </div>
-        </a>
-        <a class="folio-list__proj-link" href="#" title="project link">
-            <svg fill="none" height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-        </a>
-    </li>
-    <!-- Refonte Logiciel Codeex -->
-    <li class="folio-list__item column" data-animate-el="">
-        <a class="folio-list__item-link" href="#modal-codeex">
-            <div class="folio-list__item-pic">
-                <img alt="Refonte logiciel Codeex" src="images/projet5.png" srcset="images/projet5.png 1x, images/projet5.png 2x"/>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- STACK                                                             -->
+        <!-- ================================================================ -->
+        <section class="section-stack" id="stack">
+            <div class="section-label">
+                <span class="section-label__star">*</span>
+                MON STACK
             </div>
-            <div class="folio-list__item-text">
-                <div class="folio-list__item-cat">
-                    Logiciel &amp; BDD
-                </div>
-                <div class="folio-list__item-title">
-                    Refonte logiciel médecine douce
+
+            <div class="stack-row">
+                <h2 class="stack-category">DATA &amp;<br>ANALYSE</h2>
+                <div class="stack-icons">
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python" />
+                        <span>Python</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                            alt="Pandas" />
+                        <span>Pandas</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                            alt="NumPy" />
+                        <span>NumPy</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="logos/sql.png" alt="SQL" />
+                        <span>SQL</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="logos/plsql.png" alt="PL/SQL" />
+                        <span>PL/SQL</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="logos/mongodb.webp" alt="MongoDB" />
+                        <span>MongoDB</span>
+                    </div>
                 </div>
             </div>
-        </a>
-        <a class="folio-list__proj-link" href="#" title="project link">
-            <svg fill="none" height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd"></path></svg>
-        </a>
-    </li>
-</ul>
-<!-- Modal Templates Popup
-                    -------------------------------------------- -->
-<!-- Supprime les modals #modal-01 à #modal-06, garde uniquement les modals personnalisés -->
-<div hidden="" id="modal-powerbi">
-    <div class="modal-popup">
-        <img alt="Visualisation Power BI" src="images/powBI.png"/>
-        <div class="modal-popup__desc">
-            <h5>Visualisation Power BI</h5>
-            <p>
-                Aide à la décision via SQL + Power BI (commandes, ventes, clients, profits...).<br>
-                Création de tableaux de bord interactifs pour l’analyse des performances commerciales et la visualisation des données clés.
-            </p>
-            <ul class="modal-popup__cat">
-                <li>Power BI</li>
-                <li>SQL</li>
-                <li>Data Visualisation</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div hidden="" id="modal-buddybudget">
-    <div class="modal-popup">
-        <img alt="Projet Buddy Budget" src="images/saes4.png"/>
-        <div class="modal-popup__desc">
-            <h5>Projet Buddy Budget</h5>
-            <p>
-                Buddy Budget est une application web conçue dans le cadre d’une SAE de développement visant à répondre à un enjeu majeur : la gestion budgétaire. 
-                Dans un contexte où de nombreuses personnes rencontrent des difficultés à gérer efficacement leurs finances personnelles, Buddy Budget apporte une solution intuitive. 
-                L’application permet aux utilisateurs de planifier leur budget, suivre leurs dépenses en temps réel, et analyser leur comportement financier. 
-                En facilitant la prise de décisions éclairées, Buddy Budget vise à réduire le stress financier, éviter le surendettement, et promouvoir une meilleure stabilité économique au quotidien.
-            </p>
-            <ul class="modal-popup__cat">
-                <li>Application Web</li>
-                <li>Gestion budgétaire</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div hidden="" id="modal-therapeutes">
-    <div class="modal-popup">
-        <img alt="Base de données thérapeutes" src="images/thera.png"/>
-        <div class="modal-popup__desc">
-            <h5>Base de données thérapeutes</h5>
-            <p>
-                Dans cette SAE, nous avons conçu une base de données Oracle pour un centre de formation médicale. 
-                Le projet a couvert la création du MCD sur PowerDesigner, sa transformation en MPD, la génération des tables dans SQL Developer, 
-                l’implémentation des données et l’écriture de requêtes SQL adaptées aux besoins du client.
-            </p>
-            <ul class="modal-popup__cat">
-                <li>Oracle SQL</li>
-                <li>Base de données</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div hidden="" id="modal-campusvert">
-    <div class="modal-popup">
-        <img alt="Campus Vert" src="images/saes1.png"/>
-        <div class="modal-popup__desc">
-            <h5>Campus Vert</h5>
-            <p>
-                Dans le cadre d’une SAE, nous avons développé Le Campus Vert, un site web en HTML/CSS visant à promouvoir des modes de déplacement éco-responsables sur le campus de La Doua. 
-                Ce projet sensibilise les étudiants à l’impact environnemental de leurs choix de mobilité, tout en proposant des alternatives comme le vélo, la marche ou les transports doux. 
-                À travers une interface simple et des visuels clairs, le site informe, propose et engage la communauté universitaire à adopter un mode de vie plus durable.
-            </p>
-            <ul class="modal-popup__cat">
-                <li>Développement Web</li>
-                <li>HTML/CSS</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div hidden="" id="modal-codeex">
-    <div class="modal-popup">
-        <img alt="Refonte logiciel Codeex" src="images/projet5.png"/>
-        <div class="modal-popup__desc">
-            <h5>Refonte d’un logiciel de médecine douce – Codeex Services</h5>
-            <ul class="modal-popup__cat">
-                <li>WinDev</li>
-                <li>WLangage</li>
-                <li>SQL</li>
-                <li>HFSQL</li>
-            </ul>
-            <p>
-                <strong>Durée :</strong> 2 mois (mai - juin 2025)
-            </p>
-            <ol>
-                <li>
-                    <strong>Amélioration de l’interface graphique :</strong><br>
-                    Refonte complète de l’interface d’un logiciel médical limitant les consultations à 20 par patient. Implémentation d’un système dynamique avec une fenêtre dédiée aux consultations et un historique optimisé, rendant l’application plus fluide, ergonomique et illimitée en nombre de consultations.
-                </li>
-                <li>
-                    <strong>Refonte de la base de données :</strong><br>
-                    Refactorisation de la structure SQL en séparant les données clients, consultations et pathologies dans des tables dédiées. Résultat : une base plus performante, sécurisée (respect du RGPD) et facilement maintenable.
-                </li>
-                <li>
-                    <strong>Création d’une version démo avec système d’activation :</strong><br>
-                    Développement d’un système de version d’essai limitée à 7 jours, basé sur le numéro de série du disque dur. Conception d’un mini-logiciel pour générer et envoyer les clés d’activation, assurant un contrôle d’accès fiable.
-                </li>
-                <li>
-                    <strong>Configuration d’un installateur personnalisé :</strong><br>
-                    Création de modules d’installation via WDInst selon les besoins des clients (thérapies incluses ou non). L’installateur permet d’adapter le logiciel en fonction des fonctionnalités sélectionnées.
-                </li>
-            </ol>
-        </div>
-    </div>
-</div>
-</div> <!-- end works-portfolio -->
-<section class="s-contact target-section" id="contact">
-    <div class="row contact-top">
-        <div class="column lg-12">
-        </div>
-    </div> <!-- end contact-top -->
-    <div class="row contact-bottom" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 64px; align-items: flex-start;">
-        <div class="column lg-4 md-6 tab-12 contact-block" >
-            <h3 class="text-pretitle">Me contacter</h3>
-            <div class="contact-links">
-                <span>
-                    <a class="mailtoui" href="mailto:sofianlyadi@gmail.com" >sofianlyadi@gmail.com</a>
-                </span>
-                <span>
+
+            <div class="stack-row">
+                <h2 class="stack-category">BI &amp;<br>DATAVIZ</h2>
+                <div class="stack-icons">
+                    <div class="stack-icon-item">
+                        <img src="logos/powerbi.png" alt="Power BI" />
+                        <span>Power BI</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"
+                            alt="Apache Hop" />
+                        <span>Apache Hop</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftoffice/microsoftoffice-plain.svg"
+                            alt="Excel" />
+                        <span>Excel / VBA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stack-row">
+                <h2 class="stack-category">BASES DE<br>DONNEES</h2>
+                <div class="stack-icons">
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                            alt="PostgreSQL" />
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            alt="MySQL" />
+                        <span>MySQL</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
+                            alt="Oracle SQL" />
+                        <span>Oracle SQL</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="logos/sql.png" alt="HFSQL" />
+                        <span>HFSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stack-row">
+                <h2 class="stack-category">INFRASTRUC-<br>TURE</h2>
+                <div class="stack-icons">
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                            alt="Docker" />
+                        <span>Docker</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+                        <span>Git</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="logos/bash.png" alt="Bash" />
+                        <span>Bash</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stack-row">
+                <h2 class="stack-category">DEVELOPPE-<br>MENT</h2>
+                <div class="stack-icons">
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React" />
+                        <span>React</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+                            alt="Flask" />
+                        <span>Flask</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="logos/js.png" alt="JavaScript" />
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="logos/php.png" alt="PHP" />
+                        <span>PHP</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="logos/symfony.svg" alt="Symfony" />
+                        <span>Symfony</span>
+                    </div>
+                    <div class="stack-icon-item">
+                        <img src="logos/java.png" alt="Java" />
+                        <span>Java</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- PROJETS                                                           -->
+        <!-- ================================================================ -->
+        <section class="section-projects" id="projets">
+            <div class="section-label">
+                <span class="section-label__star">*</span>
+                PROJETS SELECTIONNES
+            </div>
+            <div class="projects-list" id="projects-list">
+
+                <!-- 01 : Outil de pilotage BI -->
+                <div class="project-item" data-image="images/pilotage_bi_1.png"
+                    data-images="images/pilotage_bi_1.png,images/pilotage_bi_2.png,images/pilotage_bi_3.png,images/pilotage_bi_4.png"
+                    data-title="Outil de pilotage BI &mdash; Stage" data-badge="Stage"
+                    data-period="Juin&ndash;Sept. 2026" data-tags="Power BI · MySQL · DAX · Apache Hop · ETL"
+                    data-desc="Cr&eacute;ation d&apos;une base MySQL en sch&eacute;ma &eacute;toile, pipeline ETL avec Apache Hop pour nettoyer et centraliser les donn&eacute;es multi-sources. D&eacute;veloppement d&apos;un tableau de bord Power BI interactif (4 pages, mesures DAX, pr&eacute;visions) pour suivre ventes, atelier de r&eacute;paration et services colis. Optimisation de la fiche Google Business Profile (+1&nbsp;000 vues locales). R&eacute;sultat : ~200h/an de reporting manuel &eacute;conomis&eacute;es pour le g&eacute;rant, donn&eacute;es fiabilis&eacute;es et centralis&eacute;es.">
+                    <span class="project-num">_01.</span>
+                    <div class="project-info">
+                        <h3 class="project-title">Outil de pilotage BI &mdash; Stage</h3>
+                        <div class="project-tags-row">
+                            <span>Power BI</span><span class="dot-sep"></span>
+                            <span>MySQL</span><span class="dot-sep"></span>
+                            <span>DAX</span><span class="dot-sep"></span>
+                            <span>Apache Hop</span><span class="dot-sep"></span>
+                            <span>ETL</span>
+                        </div>
+                    </div>
+                    <div class="project-right-col">
+                        <span class="project-badge">Stage</span>
+                        <span class="project-period">Juin&ndash;Sept. 2026</span>
+                    </div>
+                </div>
+                <hr class="project-sep">
+
+                <!-- 02 : MyMedina -->
+                <div class="project-item" data-image="images/mymedina_1.png"
+                    data-images="images/mymedina_1.png,images/mymedina_2.png,images/mymedina_3.png,images/mymedina_4.png"
+                    data-title="MyMedina &mdash; Aide &agrave; la D&eacute;cision &amp; Recommandation"
+                    data-badge="Data &amp; Full-Stack" data-period="2025&ndash;2026"
+                    data-tags="React · Flask · MySQL · Pipeline ETL · Leaflet · Recharts · JWT"
+                    data-desc="Syst&egrave;me d&apos;Aide &agrave; la D&eacute;cision pour le choix r&eacute;sidentiel au Maroc (Projet tutor&eacute; BUT AGED).&lt;br&gt;&lt;br&gt;&bull; &lt;strong&gt;Pipeline Data &amp; Mod&eacute;lisation :&lt;/strong&gt; ETL automatis&eacute; croisant les donn&eacute;es du Haut-Commissariat au Plan (HCP), Numbeo et l&apos;API OpenWeatherMap. Normalisation Min-Max (scores 0-100) et mod&eacute;lisation relationnelle en 3NF sous MySQL.&lt;br&gt;&bull; &lt;strong&gt;Moteur Algorithmique :&lt;/strong&gt; Algorithme de scoring multicrit&egrave;re pond&eacute;r&eacute; optimis&eacute; en O(n) int&eacute;grant 7 dimensions m&eacute;tier (budget, dynamisme &eacute;conomique, climat, transports, sant&eacute;, &eacute;ducation) avec filtres &eacute;liminatoires stricts.&lt;br&gt;&bull; &lt;strong&gt;Interface &amp; Dataviz :&lt;/strong&gt; Application SPA React.js avec cartographie interactive (Leaflet), comparateur matriciel de 3 villes et Scatter Plots dynamiques (Recharts : Salaire vs Co&ucirc;t de la vie).&lt;br&gt;&bull; &lt;strong&gt;S&eacute;curit&eacute; &amp; Backend :&lt;/strong&gt; API REST Flask s&eacute;curis&eacute;e (JWT, hachage Werkzeug), r&eacute;cup&eacute;ration de mot de passe par code &agrave; 6 chiffres et Back-Office d&apos;administration complet (CRUD).">
+                    <span class="project-num">_02.</span>
+                    <div class="project-info">
+                        <h3 class="project-title">MyMedina &mdash; Aide &agrave; la D&eacute;cision &amp; Recommandation
+                        </h3>
+                        <div class="project-tags-row">
+                            <span>React</span><span class="dot-sep"></span>
+                            <span>Flask</span><span class="dot-sep"></span>
+                            <span>MySQL</span><span class="dot-sep"></span>
+                            <span>ETL</span><span class="dot-sep"></span>
+                            <span>Recharts</span>
+                        </div>
+                    </div>
+                    <div class="project-right-col">
+                        <span class="project-badge">Data &amp; Full-Stack</span>
+                        <span class="project-period">2025&ndash;2026</span>
+                    </div>
+                </div>
+                <hr class="project-sep">
+
+                <!-- 03 : Refonte logiciel médecine douce -->
+                <div class="project-item" data-image="images/projet5.png"
+                    data-title="Refonte logiciel m&eacute;decine douce" data-badge="Stage"
+                    data-period="Mai&ndash;Juin 2025" data-tags="WinDev · HFSQL · SQL · RGPD"
+                    data-desc="CoodeX Services, Lyon. Am&eacute;lioration de l&apos;interface et mise en conformit&eacute; RGPD d&apos;un logiciel patient d&eacute;velopp&eacute; sous WinDev. Restructuration et optimisation de la base de donn&eacute;es HFSQL&nbsp;: refactorisation du sch&eacute;ma, indexation, suppression des redondances. &Eacute;tude de solutions anti-copie et d&eacute;veloppement d&apos;une version d&eacute;mo du logiciel pour la prospection commerciale.">
+                    <span class="project-num">_03.</span>
+                    <div class="project-info">
+                        <h3 class="project-title">Refonte logiciel m&eacute;decine douce</h3>
+                        <div class="project-tags-row">
+                            <span>WinDev</span><span class="dot-sep"></span>
+                            <span>HFSQL</span><span class="dot-sep"></span>
+                            <span>SQL</span><span class="dot-sep"></span>
+                            <span>RGPD</span>
+                        </div>
+                    </div>
+                    <div class="project-right-col">
+                        <span class="project-badge">Stage</span>
+                        <span class="project-period">Mai&ndash;Juin 2025</span>
+                    </div>
+                </div>
+                <hr class="project-sep">
+
+                <!-- 04 : Adventure Works -->
+                <div class="project-item" data-image="images/powBI.png"
+                    data-title="Adventure Works &mdash; Dashboard BI" data-badge="Projet data" data-period="2024"
+                    data-tags="Power BI · SQL · DAX · Sch&eacute;ma en &eacute;toile"
+                    data-desc="Tableau de bord d&eacute;cisionnel Adventure Works : 6 pages, 16 visuels, analyse de 150&nbsp;000+ commandes. Conception d&apos;un sch&eacute;ma en &eacute;toile (Fact_Sales + dimensions Date, Produit, Client, G&eacute;ographie, Revendeur). KPI strat&eacute;giques : chiffre d&apos;affaires, marge, volume commandes, segmentation clients. Mise &agrave; jour SQL pour simuler des sc&eacute;narios m&eacute;tier et tester les mesures DAX.">
+                    <span class="project-num">_04.</span>
+                    <div class="project-info">
+                        <h3 class="project-title">Adventure Works &mdash; Dashboard BI</h3>
+                        <div class="project-tags-row">
+                            <span>Power BI</span><span class="dot-sep"></span>
+                            <span>SQL</span><span class="dot-sep"></span>
+                            <span>DAX</span><span class="dot-sep"></span>
+                            <span>Sch&eacute;ma en &eacute;toile</span>
+                        </div>
+                    </div>
+                    <div class="project-right-col">
+                        <span class="project-badge">Projet data</span>
+                        <span class="project-period">2024</span>
+                    </div>
+                </div>
+                <hr class="project-sep">
+
+                <!-- 05 : Base de données Thérapeutes -->
+                <div class="project-item" data-image="images/thera.png"
+                    data-title="Base de donn&eacute;es Th&eacute;rapeutes &mdash; Oracle SQL" data-badge="BDD"
+                    data-period="2024" data-tags="Oracle SQL · PL/SQL · PowerDesigner · Mod&eacute;lisation"
+                    data-desc="Conception compl&egrave;te d&apos;une base de donn&eacute;es pour une structure de th&eacute;rapeutes&nbsp;: MCD sur PowerDesigner, transformation MPD → tables Oracle SQL Developer. Impl&eacute;mentation de proc&eacute;dures stock&eacute;es, triggers et fonctions pour automatiser les r&egrave;gles m&eacute;tier. Contraintes d&apos;int&eacute;grit&eacute; r&eacute;f&eacute;rentielle, requ&ecirc;tes m&eacute;tier complexes adapt&eacute;es aux besoins du cabinet.">
+                    <span class="project-num">_05.</span>
+                    <div class="project-info">
+                        <h3 class="project-title">Base de donn&eacute;es Th&eacute;rapeutes &mdash; Oracle SQL</h3>
+                        <div class="project-tags-row">
+                            <span>Oracle SQL</span><span class="dot-sep"></span>
+                            <span>PL/SQL</span><span class="dot-sep"></span>
+                            <span>PowerDesigner</span><span class="dot-sep"></span>
+                            <span>Mod&eacute;lisation</span>
+                        </div>
+                    </div>
+                    <div class="project-right-col">
+                        <span class="project-badge">BDD</span>
+                        <span class="project-period">2024</span>
+                    </div>
+                </div>
+                <hr class="project-sep">
+
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- PARCOURS                                                          -->
+        <!-- ================================================================ -->
+        <section class="section-parcours" id="parcours">
+            <div class="section-label">
+                <span class="section-label__star">*</span>
+                PARCOURS
+            </div>
+
+            <!-- FORMATION -->
+            <div class="parcours-group-label">FORMATION</div>
+            <div class="experience-list">
+
+                <div class="exp-item exp-item--future">
+                    <span class="exp-num">01</span>
+                    <div class="exp-main">
+                        <h3 class="exp-title">Master Informatique &mdash; Admis</h3>
+                        <p class="exp-company">Universit&eacute; Lumi&egrave;re Lyon&nbsp;2</p>
+                    </div>
+                    <p class="exp-desc">Parcours SISE (Statistique et Informatique pour la Science de l&apos;Entreprise)
+                        &mdash;
+                        data science, intelligence artificielle, ing&eacute;nierie des donn&eacute;es.</p>
+                    <span class="exp-date">2026&ndash;2028</span>
+                </div>
+                <hr class="exp-sep">
+
+                <div class="exp-item">
+                    <span class="exp-num">02</span>
+                    <div class="exp-main">
+                        <h3 class="exp-title">BUT Informatique &mdash; parcours AGED</h3>
+                        <p class="exp-company">IUT Lyon&nbsp;1</p>
+                    </div>
+                    <p class="exp-desc">Sp&eacute;cialisation Analyse et Gestion des Entreprises par les Donn&eacute;es.
+                        Architecture logicielle, bases de donn&eacute;es, IA, Big Data, statistiques, cryptographie.</p>
+                    <span class="exp-date">2023&ndash;2026</span>
+                </div>
+                <hr class="exp-sep">
+
+                <div class="exp-item">
+                    <span class="exp-num">03</span>
+                    <div class="exp-main">
+                        <h3 class="exp-title">Bac STI2D &mdash; Mention Bien</h3>
+                        <p class="exp-company">La Martini&egrave;re Diderot, Lyon</p>
+                    </div>
+                    <p class="exp-desc">Sciences et technologies de l&apos;industrie et du d&eacute;veloppement durable.
+                        Sp&eacute;cialit&eacute; SIN (Syst&egrave;mes d&apos;Information et Num&eacute;rique).</p>
+                    <span class="exp-date">2021&ndash;2023</span>
+                </div>
+                <hr class="exp-sep">
+
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="parcours-group-label">EXP&Eacute;RIENCE</div>
+            <div class="experience-list">
+
+                <div class="exp-item" data-image="images/pilotage_bi_1.png"
+                    data-images="images/pilotage_bi_1.png,images/pilotage_bi_2.png,images/pilotage_bi_3.png,images/pilotage_bi_4.png"
+                    data-title="Stage &mdash; Outil de pilotage BI" data-badge="Stage"
+                    data-period="Juin&ndash;Sept. 2026" data-tags="Power BI · MySQL · DAX · Apache Hop · ETL"
+                    data-desc="Commerce de proximit&eacute; multi-services, Lyon. Cr&eacute;ation d&apos;une base MySQL en sch&eacute;ma &eacute;toile, pipeline ETL (Apache Hop), tableau de bord Power BI interactif (4 pages, DAX, pr&eacute;visions) pour suivre ventes, atelier de r&eacute;paration et services colis. ~200h/an de reporting &eacute;conomis&eacute;es pour le g&eacute;rant.">
+                    <span class="exp-num">01</span>
+                    <div class="exp-main">
+                        <h3 class="exp-title">Stage &mdash; Outil de pilotage BI</h3>
+                        <p class="exp-company">Commerce de proximit&eacute; multi-services, Lyon</p>
+                    </div>
+                    <p class="exp-desc">Cr&eacute;ation d&apos;une base MySQL en sch&eacute;ma &eacute;toile, pipeline
+                        ETL (Apache
+                        Hop), tableau de bord Power BI interactif (4 pages, DAX, pr&eacute;visions). ~200h/an de
+                        reporting
+                        &eacute;conomis&eacute;es.</p>
+                    <span class="exp-date">Juin&ndash;Sept. 2026</span>
+                </div>
+                <hr class="exp-sep">
+
+                <div class="exp-item" data-image="images/projet5.png"
+                    data-title="Stage &mdash; D&eacute;veloppement logiciel &amp; BDD" data-badge="Stage"
+                    data-period="Avr.&ndash;Juin 2024" data-tags="WinDev · HFSQL · SQL · RGPD"
+                    data-desc="CoodeX Services, Lyon. Am&eacute;lioration de l&apos;interface et mise en conformit&eacute; RGPD d&apos;un logiciel patient (WinDev). Restructuration et optimisation de la base de donn&eacute;es HFSQL. &Eacute;tude de solutions anti-copie et d&eacute;veloppement d&apos;une version d&eacute;mo du logiciel.">
+                    <span class="exp-num">02</span>
+                    <div class="exp-main">
+                        <h3 class="exp-title">Stage &mdash; D&eacute;veloppement logiciel &amp; BDD</h3>
+                        <p class="exp-company">CoodeX Services, Lyon</p>
+                    </div>
+                    <p class="exp-desc">Am&eacute;lioration de l&apos;interface et mise en conformit&eacute; RGPD
+                        d&apos;un
+                        logiciel patient (WinDev). Restructuration et optimisation de la base de donn&eacute;es HFSQL.
+                    </p>
+                    <span class="exp-date">Avr.&ndash;Juin 2024</span>
+                </div>
+                <hr class="exp-sep">
+
+            </div>
+        </section>
+
+
+        <!-- ================================================================ -->
+        <!-- CONTACT                                                           -->
+        <!-- ================================================================ -->
+        <section class="section-contact" id="contact">
+            <div class="contact-inner">
+                <div class="section-label">
+                    <span class="section-label__star">*</span>
+                    CONTACT
+                </div>
+                <h2 class="contact-heading">
+                    Discutons de<br><span>votre projet.</span>
+                </h2>
+                <a href="mailto:sofianlyadi@gmail.com" class="contact-email-link">
+                    sofianlyadi@gmail.com
+                </a>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/sofian-l-925045297/" target="_blank" rel="noopener">LinkedIn
+                        &#8599;</a>
+                    <a href="CV_Lyadi_Sofian_.pdf" target="_blank" rel="noopener">Mon CV &#8599;</a>
                     <a href="tel:+33617275662">+33 6 17 27 56 62</a>
-                </span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <span class="footer-copy">2025 Sofian Lyadi &mdash; &Eacute;tudiant BUT Informatique &middot; Admis en Master
+            Informatique Lyon&nbsp;2</span>
+        <a href="#top" class="footer-top">Retour en haut &#8593;</a>
+    </footer>
+
+    <!-- Image preview flottante -->
+    <div class="project-preview" id="project-preview">
+        <img src="" alt="" id="preview-img" />
+    </div>
+
+    <!-- Modal projet -->
+    <div class="project-modal" id="project-modal" role="dialog" aria-modal="true">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-panel">
+            <button class="modal-close" id="modal-close" aria-label="Fermer">&times;</button>
+            <div class="modal-img-wrap">
+                <button class="modal-nav modal-prev" id="modal-prev" aria-label="Image précédente">&#10094;</button>
+                <img src="" alt="" id="modal-img" />
+                <button class="modal-nav modal-next" id="modal-next" aria-label="Image suivante">&#10095;</button>
+                <div class="modal-img-counter" id="modal-img-counter">1 / 1</div>
+            </div>
+            <div class="modal-thumbs" id="modal-thumbs"></div>
+            <div class="modal-body">
+                <div class="modal-meta">
+                    <span class="modal-badge" id="modal-badge"></span>
+                    <span class="modal-period" id="modal-period"></span>
+                </div>
+                <h2 class="modal-title" id="modal-title"></h2>
+                <p class="modal-tags" id="modal-tags"></p>
+                <p class="modal-desc" id="modal-desc"></p>
             </div>
         </div>
-        <div class="column lg-4 md-6 tab-12 contact-block" >
-            <h3 class="text-pretitle">Réseaux sociaux</h3>
-            <ul class="contact-social" style="display: flex; align-items: center; gap: 16px;">
-                <li>
-                    <a href="https://www.linkedin.com/in/sofian-l-925045297/" title="LinkedIn" style="display: flex; align-items: center; gap: 8px;">
-                        <span class="skill-logo" style="margin:0;">
-                            <img src="logos/linkedin.png" alt="LinkedIn" />
-                        </span>
-                        <span style="font-size:1rem;">LinkedIn</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div> <!-- end contact-bottom -->
-</section> <!-- end contact -->
+    </div>
 
-</main> <!-- end s-content -->
-<!-- ## footer
-        ================================================== -->
-<footer class="s-footer">
-<div class="row" style="align-items: center; min-height: 70px;">
-    <div class="column ss-copyright" style="font-size: 1.05rem; padding: 10px 0;">
-        <span>© 2025 Sofian Lyadi. Tous droits réservés.</span>
-    </div>
-    <div class="ss-go-top" style="padding: 10px 0;">
-        <a class="smoothscroll" href="#top" title="Back to Top">
-            <svg clip-rule="evenodd" fill-rule="evenodd" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"></path></svg>
-        </a>
-    </div>
-</div>
-</footer> <!-- end s-footer -->
-</div> <!-- end -s-pagewrap -->
-<!-- Java Script
-    ================================================== -->
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
 </body>
+
 </html>
