@@ -1,0 +1,607 @@
+/* ================================================================
+ * aged.css — Composants Référentiel AGED · BUT Informatique
+ * Sofian Lyadi · Parcours AGED (Administration, Gestion, Exploitation des Données)
+ * Fichier additif — ne modifie pas portfolio.css
+ * ================================================================ */
+
+/* ----------------------------------------------------------------
+ * VARIABLES AC (palette bleue, distincte du teal principal)
+ * ---------------------------------------------------------------- */
+:root {
+  /* Badges AC généraux */
+  --ac-bg:       #EFF6FF;
+  --ac-text:     #1D4ED8;
+  --ac-border:   #BFDBFE;
+
+  /* C1 — Gérer les données (bleu) */
+  --ac-c1-bg:    #EFF6FF;
+  --ac-c1-text:  #1D4ED8;
+  --ac-c1-border:#BFDBFE;
+
+  /* C2 — Développer ETL (indigo) */
+  --ac-c2-bg:    #EEF2FF;
+  --ac-c2-text:  #3730A3;
+  --ac-c2-border:#C7D2FE;
+
+  /* C3 — Analyser & Power BI (violet) */
+  --ac-c3-bg:    #F5F3FF;
+  --ac-c3-text:  #5B21B6;
+  --ac-c3-border:#DDD6FE;
+
+  /* Police monospace pour les codes AC */
+  --font-mono:   'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+/* ================================================================
+ * A. FILTRES PAR COMPÉTENCE
+ * ================================================================ */
+.ac-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.ac-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 1.5px solid var(--border);
+  background: var(--bg-card);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.ac-filter-btn:hover {
+  border-color: var(--ac-border);
+  color: var(--ac-text);
+  background: var(--ac-bg);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.12);
+}
+
+.ac-filter-btn.is-active {
+  background: #1D4ED8;
+  color: #fff;
+  border-color: #1D4ED8;
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.28);
+}
+
+.ac-filter-btn.is-active:hover {
+  background: #1e40af;
+  border-color: #1e40af;
+  transform: translateY(-1px);
+}
+
+/* Indicateur de compétence dans le bouton filtre */
+.ac-filter-btn::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.ac-filter-btn[data-filter="all"]::before { background: #0d7c8c; }
+.ac-filter-btn[data-filter="C1"]::before  { background: #1D4ED8; }
+.ac-filter-btn[data-filter="C2"]::before  { background: #3730A3; }
+.ac-filter-btn[data-filter="C3"]::before  { background: #5B21B6; }
+
+/* Dim / highlight des cartes projet lors du filtrage */
+.projects-list.ac-filtering .project-item {
+  opacity: 0.2;
+  transition: opacity 0.35s ease;
+}
+.projects-list.ac-filtering .project-item.ac-match {
+  opacity: 1;
+}
+
+/* ================================================================
+ * B. BADGES AC sur les cartes projets
+ * ================================================================ */
+.ac-badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.ac-badge-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.ac-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--ac-c1-border);
+  background: var(--ac-c1-bg);
+  color: var(--ac-c1-text);
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: default;
+}
+.ac-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(29, 78, 216, 0.15);
+}
+
+/* Couleurs par compétence */
+.ac-badge[data-ac-code^="AC31"] {
+  background: var(--ac-c1-bg);
+  color: var(--ac-c1-text);
+  border-color: var(--ac-c1-border);
+}
+.ac-badge[data-ac-code^="AC32"] {
+  background: var(--ac-c2-bg);
+  color: var(--ac-c2-text);
+  border-color: var(--ac-c2-border);
+}
+.ac-badge[data-ac-code^="AC33"] {
+  background: var(--ac-c3-bg);
+  color: var(--ac-c3-text);
+  border-color: var(--ac-c3-border);
+}
+
+/* ================================================================
+ * C. SECTION RÉFÉRENTIEL — Matrice des Compétences & Preuves
+ * ================================================================ */
+.section-referentiel {
+  min-height: unset;
+  padding: clamp(80px, 12vw, 140px) var(--pad-x);
+  background: #F8FAFC;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-referentiel::before {
+  content: '';
+  position: absolute;
+  top: -5%;
+  right: -8%;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(29,78,216,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Intro texte */
+.referentiel-intro {
+  max-width: 720px;
+  margin-bottom: clamp(40px, 6vw, 72px);
+}
+.referentiel-intro p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.85;
+}
+
+/* En-têtes des compétences (C1, C2, C3) */
+.ac-competence-block {
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.ac-competence-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid;
+}
+.ac-competence-header.c1 { border-color: #BFDBFE; }
+.ac-competence-header.c2 { border-color: #C7D2FE; }
+.ac-competence-header.c3 { border-color: #DDD6FE; }
+
+.ac-competence-pill {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: 1.5px solid;
+  flex-shrink: 0;
+}
+.ac-competence-pill.c1 {
+  background: var(--ac-c1-bg);
+  color: var(--ac-c1-text);
+  border-color: var(--ac-c1-border);
+}
+.ac-competence-pill.c2 {
+  background: var(--ac-c2-bg);
+  color: var(--ac-c2-text);
+  border-color: var(--ac-c2-border);
+}
+.ac-competence-pill.c3 {
+  background: var(--ac-c3-bg);
+  color: var(--ac-c3-text);
+  border-color: var(--ac-c3-border);
+}
+
+.ac-competence-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(18px, 2vw, 26px);
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* Tableau matrice — Grid 3 colonnes */
+.ac-matrix {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.ac-matrix-row {
+  display: grid;
+  grid-template-columns: 220px 1fr 1fr;
+  gap: 0;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.ac-matrix-row:hover {
+  box-shadow: 0 6px 24px rgba(29,78,216,0.1);
+  transform: translateY(-1px);
+}
+
+.ac-matrix-cell {
+  padding: 18px 20px;
+  border-right: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ac-matrix-cell:last-child { border-right: none; }
+
+.ac-matrix-cell-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+.ac-matrix-code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.ac-matrix-code.c1 { color: var(--ac-c1-text); }
+.ac-matrix-code.c2 { color: var(--ac-c2-text); }
+.ac-matrix-code.c3 { color: var(--ac-c3-text); }
+
+.ac-matrix-ac-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.ac-matrix-livrable {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.ac-matrix-livrable code {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  background: #F1F5F9;
+  color: #475569;
+  padding: 1px 6px;
+  border-radius: 3px;
+  border: 1px solid #E2E8F0;
+}
+
+.ac-matrix-reflexion {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  font-style: italic;
+}
+
+.ac-matrix-reflexion strong {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ================================================================
+ * D. PROGRESSION S4 → S6
+ * ================================================================ */
+.progression-section {
+  margin-top: clamp(48px, 7vw, 80px);
+  padding-top: clamp(40px, 5vw, 56px);
+  border-top: 1px solid var(--border);
+}
+
+.progression-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.progression-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  font-size: clamp(22px, 3vw, 36px);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.progression-arrow span.arrow-icon {
+  color: var(--ac-text);
+  font-size: 1.2em;
+}
+
+.progression-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  position: relative;
+}
+
+.progression-grid::before {
+  content: '→';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--ac-text);
+  z-index: 2;
+  background: #F8FAFC;
+  padding: 8px 4px;
+  line-height: 1;
+}
+
+.progression-card {
+  background: #fff;
+  border: 1.5px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+.progression-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.progression-card-header {
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progression-card.s4 .progression-card-header {
+  background: linear-gradient(135deg, #F1F5F9, #E2E8F0);
+  border-bottom: 1px solid #CBD5E1;
+}
+.progression-card.s6 .progression-card-header {
+  background: linear-gradient(135deg, var(--ac-c1-bg), #DBEAFE);
+  border-bottom: 1px solid var(--ac-c1-border);
+}
+
+.progression-level-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 100px;
+  letter-spacing: 0.05em;
+}
+.progression-card.s4 .progression-level-tag {
+  background: #CBD5E1;
+  color: #475569;
+}
+.progression-card.s6 .progression-level-tag {
+  background: #BFDBFE;
+  color: #1D4ED8;
+}
+
+.progression-level-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(14px, 1.4vw, 18px);
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.progression-card.s6 .progression-level-title {
+  color: var(--ac-c1-text);
+}
+
+.progression-card-body {
+  padding: 20px 24px;
+}
+
+.progression-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.progression-item:last-child { border-bottom: none; }
+
+.progression-item::before {
+  content: '·';
+  font-size: 18px;
+  line-height: 1;
+  padding-top: 3px;
+  flex-shrink: 0;
+}
+.progression-card.s4 .progression-item::before { color: #94A3B8; }
+.progression-card.s6 .progression-item::before { color: #1D4ED8; }
+
+.progression-item strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ROI Context header */
+.roi-context {
+  margin-bottom: 20px;
+}
+.roi-context__title {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+}
+.roi-context__sub {
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+/* ROI Stat — label AC */
+.roi-stat__ac {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  color: var(--ac-c1-text);
+  letter-spacing: 0.06em;
+  margin-top: 6px;
+  opacity: 0.75;
+}
+
+/* ROI Banner */
+.roi-banner {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.roi-stat {
+  background: #fff;
+  border: 1px solid var(--ac-c1-border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.roi-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(29,78,216,0.1);
+}
+
+.roi-stat__num {
+  font-family: var(--font-head);
+  font-weight: 900;
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: #1D4ED8;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  display: block;
+}
+
+.roi-stat__label {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  margin-top: 5px;
+  line-height: 1.4;
+  display: block;
+}
+
+/* ================================================================
+ * RESPONSIVE — Matrice & Progression
+ * ================================================================ */
+@media (max-width: 900px) {
+  .ac-matrix-row {
+    grid-template-columns: 1fr;
+  }
+  .ac-matrix-cell {
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: 14px 16px;
+  }
+  .ac-matrix-cell:last-child { border-bottom: none; }
+
+  .progression-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .progression-grid::before {
+    content: '↓';
+    top: auto;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #F8FAFC;
+  }
+  .progression-grid { padding-bottom: 8px; }
+
+  .roi-banner { grid-template-columns: 1fr; gap: 10px; }
+}
+
+@media (max-width: 600px) {
+  .ac-filters {
+    gap: 8px;
+  }
+  .ac-filter-btn {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+  .ac-badge {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+  .ac-competence-title {
+    font-size: 16px;
+  }
+  .roi-banner { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .roi-stat { padding: 12px 8px; }
+  .roi-stat__num { font-size: 26px; }
+  .roi-stat__label { font-size: 10px; }
+}

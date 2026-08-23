@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="utf-8" />
-
+    <title>Sofian Lyadi &mdash; Data Engineer &amp; Data Analyst · BUT Informatique AGED</title>
     <meta name="description"
-        content="Portfolio de Sofian Lyadi, etudiant en 3eme annee de BUT Informatique, admis en Master Informatique a Lyon 2. Python, SQL, PostgreSQL, Power BI, Docker." />
+        content="Portfolio de Sofian Lyadi, Data Engineer &amp; Data Analyst, 3&egrave;me ann&eacute;e de BUT Informatique parcours AGED &agrave; l'IUT Lyon 1. Comp&eacute;tences : Python, SQL/MySQL, Apache Hop (ETL), Power BI, DAX. Admis en Master Informatique Lyon 2." />
     <meta name="author" content="Sofian Lyadi" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link href="css/portfolio.css" rel="stylesheet" />
+    <link href="css/aged.css" rel="stylesheet" />
     <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
     <link href="favicon.ico" rel="icon" />
 </head>
@@ -292,17 +293,27 @@
                 <span class="section-label__star">*</span>
                 PROJETS SELECTIONNES
             </div>
+
+            <!-- Filtres par Compétence AGED -->
+            <div class="ac-filters" id="ac-filters" role="tablist" aria-label="Filtrer par comp&eacute;tence AGED">
+                <button class="ac-filter-btn is-active" data-filter="all" aria-pressed="true">Tous les projets</button>
+                <button class="ac-filter-btn" data-filter="C1" aria-pressed="false">C1 &middot; G&eacute;rer les donn&eacute;es</button>
+                <button class="ac-filter-btn" data-filter="C2" aria-pressed="false">C2 &middot; D&eacute;velopper ETL</button>
+                <button class="ac-filter-btn" data-filter="C3" aria-pressed="false">C3 &middot; Analyser &amp; Power BI</button>
+            </div>
+
             <div class="projects-list" id="projects-list">
 
-                <!-- 01 : Outil de pilotage BI -->
+                <!-- 01 : Outil de pilotage BI — Stage S6 (Projet Vedette) -->
                 <div class="project-item" data-image="images/pilotage_bi_1.png"
                     data-images="images/pilotage_bi_1.png,images/pilotage_bi_2.png,images/pilotage_bi_3.png,images/pilotage_bi_4.png"
-                    data-title="Outil de pilotage BI &mdash; Stage" data-badge="Stage"
+                    data-title="Outil de pilotage BI &mdash; Stage S6" data-badge="Stage S6 · AGED"
                     data-period="Juin&ndash;Sept. 2026" data-tags="Power BI · MySQL · DAX · Apache Hop · ETL"
-                    data-desc="Cr&eacute;ation d&apos;une base MySQL en sch&eacute;ma &eacute;toile, pipeline ETL avec Apache Hop pour nettoyer et centraliser les donn&eacute;es multi-sources. D&eacute;veloppement d&apos;un tableau de bord Power BI interactif (4 pages, mesures DAX, pr&eacute;visions) pour suivre ventes, atelier de r&eacute;paration et services colis. Optimisation de la fiche Google Business Profile (+1&nbsp;000 vues locales). R&eacute;sultat : ~200h/an de reporting manuel &eacute;conomis&eacute;es pour le g&eacute;rant, donn&eacute;es fiabilis&eacute;es et centralis&eacute;es.">
+                    data-ac="C1,C2,C3"
+                    data-desc="Cr&eacute;ation d&apos;une base MySQL en sch&eacute;ma &eacute;toile (<code>boutique_db</code>), pipeline ETL avec Apache Hop pour nettoyer et centraliser les donn&eacute;es multi-sources (table de quarantaine <code>quarantaine_rejets</code> : 226 erreurs isol&eacute;es). D&eacute;veloppement d&apos;un tableau de bord Power BI interactif (4 pages, table de mesures DAX <code>_Mesures</code>, slicers dynamiques) pour suivre ventes, atelier de r&eacute;paration et services colis. Workflow ma&icirc;tre <code>main_workflow.hwf</code> orchestrant 3 pipelines. Optimisation de la fiche Google Business Profile (+1&nbsp;000 vues locales). R&eacute;sultat&nbsp;: ~200h/an de reporting manuel &eacute;conomis&eacute;es, pr&eacute;conisations Mondial Relay et levier Web-to-Store valid&eacute;s par le dirigeant.">
                     <span class="project-num">_01.</span>
                     <div class="project-info">
-                        <h3 class="project-title">Outil de pilotage BI &mdash; Stage</h3>
+                        <h3 class="project-title">Outil de pilotage BI &mdash; Stage S6</h3>
                         <div class="project-tags-row">
                             <span>Power BI</span><span class="dot-sep"></span>
                             <span>MySQL</span><span class="dot-sep"></span>
@@ -310,9 +321,19 @@
                             <span>Apache Hop</span><span class="dot-sep"></span>
                             <span>ETL</span>
                         </div>
+                        <!-- Badges AC — Référentiel AGED -->
+                        <div class="ac-badge-group" aria-label="Apprentissages Critiques couverts">
+                            <span class="ac-badge-label">R&eacute;f&eacute;rentiel AGED</span>
+                            <span class="ac-badge" data-ac-code="AC31.01">#AC31.01 &middot; BDD &Eacute;toile</span>
+                            <span class="ac-badge" data-ac-code="AC31.02">#AC31.02 &middot; Quarantaine SQL</span>
+                            <span class="ac-badge" data-ac-code="AC32.01">#AC32.01 &middot; ETL Apache Hop</span>
+                            <span class="ac-badge" data-ac-code="AC32.02">#AC32.02 &middot; Workflow Auto</span>
+                            <span class="ac-badge" data-ac-code="AC33.01">#AC33.01 &middot; Power BI DAX</span>
+                            <span class="ac-badge" data-ac-code="AC33.02">#AC33.02 &middot; Data Storytelling</span>
+                        </div>
                     </div>
                     <div class="project-right-col">
-                        <span class="project-badge">Stage</span>
+                        <span class="project-badge">Stage S6 &middot; AGED</span>
                         <span class="project-period">Juin&ndash;Sept. 2026</span>
                     </div>
                 </div>
@@ -322,8 +343,9 @@
                 <div class="project-item" data-image="images/mymedina_1.png"
                     data-images="images/mymedina_1.png,images/mymedina_2.png,images/mymedina_3.png,images/mymedina_4.png"
                     data-title="MyMedina &mdash; Aide &agrave; la D&eacute;cision &amp; Recommandation"
-                    data-badge="Data &amp; Full-Stack" data-period="2025&ndash;2026"
+                    data-badge="Data &amp; Full-Stack · SAÉ AGED" data-period="2025&ndash;2026"
                     data-tags="React · Flask · MySQL · Pipeline ETL · Leaflet · Recharts · JWT"
+                    data-ac="C1,C2,C3"
                     data-desc="Syst&egrave;me d&apos;Aide &agrave; la D&eacute;cision pour le choix r&eacute;sidentiel au Maroc (Projet tutor&eacute; BUT AGED).&lt;br&gt;&lt;br&gt;&bull; &lt;strong&gt;Pipeline Data &amp; Mod&eacute;lisation :&lt;/strong&gt; ETL automatis&eacute; croisant les donn&eacute;es du Haut-Commissariat au Plan (HCP), Numbeo et l&apos;API OpenWeatherMap. Normalisation Min-Max (scores 0-100) et mod&eacute;lisation relationnelle en 3NF sous MySQL.&lt;br&gt;&bull; &lt;strong&gt;Moteur Algorithmique :&lt;/strong&gt; Algorithme de scoring multicrit&egrave;re pond&eacute;r&eacute; optimis&eacute; en O(n) int&eacute;grant 7 dimensions m&eacute;tier (budget, dynamisme &eacute;conomique, climat, transports, sant&eacute;, &eacute;ducation) avec filtres &eacute;liminatoires stricts.&lt;br&gt;&bull; &lt;strong&gt;Interface &amp; Dataviz :&lt;/strong&gt; Application SPA React.js avec cartographie interactive (Leaflet), comparateur matriciel de 3 villes et Scatter Plots dynamiques (Recharts : Salaire vs Co&ucirc;t de la vie).&lt;br&gt;&bull; &lt;strong&gt;S&eacute;curit&eacute; &amp; Backend :&lt;/strong&gt; API REST Flask s&eacute;curis&eacute;e (JWT, hachage Werkzeug), r&eacute;cup&eacute;ration de mot de passe par code &agrave; 6 chiffres et Back-Office d&apos;administration complet (CRUD).">
                     <span class="project-num">_02.</span>
                     <div class="project-info">
@@ -336,31 +358,44 @@
                             <span>ETL</span><span class="dot-sep"></span>
                             <span>Recharts</span>
                         </div>
+                        <div class="ac-badge-group" aria-label="Apprentissages Critiques couverts">
+                            <span class="ac-badge-label">R&eacute;f&eacute;rentiel AGED</span>
+                            <span class="ac-badge" data-ac-code="AC31.01">#AC31.01 &middot; BDD 3NF</span>
+                            <span class="ac-badge" data-ac-code="AC32.01">#AC32.01 &middot; Pipeline ETL</span>
+                            <span class="ac-badge" data-ac-code="AC33.01">#AC33.01 &middot; Scoring Dataviz</span>
+                            <span class="ac-badge" data-ac-code="AC33.02">#AC33.02 &middot; Aide &agrave; la d&eacute;cision</span>
+                        </div>
                     </div>
                     <div class="project-right-col">
-                        <span class="project-badge">Data &amp; Full-Stack</span>
+                        <span class="project-badge">SAÉ AGED</span>
                         <span class="project-period">2025&ndash;2026</span>
                     </div>
                 </div>
                 <hr class="project-sep">
 
-                <!-- 03 : Refonte logiciel médecine douce -->
+                <!-- 03 : Refonte logiciel médecine douce — Stage S4 (CoodeX) -->
                 <div class="project-item" data-image="images/projet5.png"
-                    data-title="Refonte logiciel m&eacute;decine douce" data-badge="Stage"
+                    data-title="Refonte logiciel m&eacute;decine douce &mdash; Stage S4" data-badge="Stage S4 · CoodeX"
                     data-period="Mai&ndash;Juin 2025" data-tags="WinDev · HFSQL · SQL · RGPD"
+                    data-ac="C1"
                     data-desc="CoodeX Services, Lyon. Am&eacute;lioration de l&apos;interface et mise en conformit&eacute; RGPD d&apos;un logiciel patient d&eacute;velopp&eacute; sous WinDev. Restructuration et optimisation de la base de donn&eacute;es HFSQL&nbsp;: refactorisation du sch&eacute;ma, indexation, suppression des redondances. &Eacute;tude de solutions anti-copie et d&eacute;veloppement d&apos;une version d&eacute;mo du logiciel pour la prospection commerciale.">
                     <span class="project-num">_03.</span>
                     <div class="project-info">
-                        <h3 class="project-title">Refonte logiciel m&eacute;decine douce</h3>
+                        <h3 class="project-title">Refonte logiciel m&eacute;decine douce &mdash; S4</h3>
                         <div class="project-tags-row">
                             <span>WinDev</span><span class="dot-sep"></span>
                             <span>HFSQL</span><span class="dot-sep"></span>
                             <span>SQL</span><span class="dot-sep"></span>
                             <span>RGPD</span>
                         </div>
+                        <div class="ac-badge-group" aria-label="Apprentissages Critiques couverts">
+                            <span class="ac-badge-label">R&eacute;f&eacute;rentiel AGED</span>
+                            <span class="ac-badge" data-ac-code="AC31.01">#AC31.01 &middot; Restructuration BDD</span>
+                            <span class="ac-badge" data-ac-code="AC31.02">#AC31.02 &middot; Gouvernance RGPD</span>
+                        </div>
                     </div>
                     <div class="project-right-col">
-                        <span class="project-badge">Stage</span>
+                        <span class="project-badge">Stage S4</span>
                         <span class="project-period">Mai&ndash;Juin 2025</span>
                     </div>
                 </div>
@@ -368,8 +403,9 @@
 
                 <!-- 04 : Adventure Works -->
                 <div class="project-item" data-image="images/powBI.png"
-                    data-title="Adventure Works &mdash; Dashboard BI" data-badge="Projet data" data-period="2024"
+                    data-title="Adventure Works &mdash; Dashboard BI" data-badge="SAÉ Data · AGED" data-period="2024"
                     data-tags="Power BI · SQL · DAX · Sch&eacute;ma en &eacute;toile"
+                    data-ac="C3"
                     data-desc="Tableau de bord d&eacute;cisionnel Adventure Works : 6 pages, 16 visuels, analyse de 150&nbsp;000+ commandes. Conception d&apos;un sch&eacute;ma en &eacute;toile (Fact_Sales + dimensions Date, Produit, Client, G&eacute;ographie, Revendeur). KPI strat&eacute;giques : chiffre d&apos;affaires, marge, volume commandes, segmentation clients. Mise &agrave; jour SQL pour simuler des sc&eacute;narios m&eacute;tier et tester les mesures DAX.">
                     <span class="project-num">_04.</span>
                     <div class="project-info">
@@ -380,9 +416,14 @@
                             <span>DAX</span><span class="dot-sep"></span>
                             <span>Sch&eacute;ma en &eacute;toile</span>
                         </div>
+                        <div class="ac-badge-group" aria-label="Apprentissages Critiques couverts">
+                            <span class="ac-badge-label">R&eacute;f&eacute;rentiel AGED</span>
+                            <span class="ac-badge" data-ac-code="AC33.01">#AC33.01 &middot; Dashboard 6 pages DAX</span>
+                            <span class="ac-badge" data-ac-code="AC33.02">#AC33.02 &middot; Analyse Marge &amp; Volume</span>
+                        </div>
                     </div>
                     <div class="project-right-col">
-                        <span class="project-badge">Projet data</span>
+                        <span class="project-badge">SAÉ Data</span>
                         <span class="project-period">2024</span>
                     </div>
                 </div>
@@ -390,9 +431,10 @@
 
                 <!-- 05 : Base de données Thérapeutes -->
                 <div class="project-item" data-image="images/thera.png"
-                    data-title="Base de donn&eacute;es Th&eacute;rapeutes &mdash; Oracle SQL" data-badge="BDD"
+                    data-title="Base de donn&eacute;es Th&eacute;rapeutes &mdash; Oracle SQL" data-badge="SAÉ BDD · AGED"
                     data-period="2024" data-tags="Oracle SQL · PL/SQL · PowerDesigner · Mod&eacute;lisation"
-                    data-desc="Conception compl&egrave;te d&apos;une base de donn&eacute;es pour une structure de th&eacute;rapeutes&nbsp;: MCD sur PowerDesigner, transformation MPD → tables Oracle SQL Developer. Impl&eacute;mentation de proc&eacute;dures stock&eacute;es, triggers et fonctions pour automatiser les r&egrave;gles m&eacute;tier. Contraintes d&apos;int&eacute;grit&eacute; r&eacute;f&eacute;rentielle, requ&ecirc;tes m&eacute;tier complexes adapt&eacute;es aux besoins du cabinet.">
+                    data-ac="C1"
+                    data-desc="Conception compl&egrave;te d&apos;une base de donn&eacute;es pour une structure de th&eacute;rapeutes&nbsp;: MCD sur PowerDesigner, transformation MPD &rarr; tables Oracle SQL Developer. Impl&eacute;mentation de proc&eacute;dures stock&eacute;es, triggers et fonctions pour automatiser les r&egrave;gles m&eacute;tier. Contraintes d&apos;int&eacute;grit&eacute; r&eacute;f&eacute;rentielle, requ&ecirc;tes m&eacute;tier complexes adapt&eacute;es aux besoins du cabinet.">
                     <span class="project-num">_05.</span>
                     <div class="project-info">
                         <h3 class="project-title">Base de donn&eacute;es Th&eacute;rapeutes &mdash; Oracle SQL</h3>
@@ -402,15 +444,199 @@
                             <span>PowerDesigner</span><span class="dot-sep"></span>
                             <span>Mod&eacute;lisation</span>
                         </div>
+                        <div class="ac-badge-group" aria-label="Apprentissages Critiques couverts">
+                            <span class="ac-badge-label">R&eacute;f&eacute;rentiel AGED</span>
+                            <span class="ac-badge" data-ac-code="AC31.01">#AC31.01 &middot; MCD Merise / Oracle</span>
+                            <span class="ac-badge" data-ac-code="AC31.02">#AC31.02 &middot; Triggers &amp; int&eacute;grit&eacute;</span>
+                        </div>
                     </div>
                     <div class="project-right-col">
-                        <span class="project-badge">BDD</span>
+                        <span class="project-badge">SAÉ BDD</span>
                         <span class="project-period">2024</span>
                     </div>
                 </div>
                 <hr class="project-sep">
 
             </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- RÉFÉRENTIEL AGED — Matrice des Compétences & Preuves Métiers    -->
+        <!-- ================================================================ -->
+        <section class="section-referentiel" id="referentiel">
+            <div class="section-label">
+                <span class="section-label__star">*</span>
+                R&Eacute;F&Eacute;RENTIEL AGED &mdash; BUT Informatique
+            </div>
+
+            <div class="referentiel-intro reveal">
+                <p>Cette matrice retrace les <strong>6 Apprentissages Critiques</strong> du parcours AGED
+                (Administration, Gestion et Exploitation des Donn&eacute;es), valid&eacute;s &agrave; travers
+                mes projets et stages. Chaque AC est associ&eacute; &agrave; un livrable concret et &agrave;
+                une d&eacute;monstration r&eacute;flexive issue de mon exp&eacute;rience en entreprise.</p>
+            </div>
+
+            <!-- COMPÉTENCE 1 : Gérer les données -->
+            <div class="ac-competence-block reveal">
+                <div class="ac-competence-header c1">
+                    <span class="ac-competence-pill c1">C1</span>
+                    <h3 class="ac-competence-title">G&eacute;rer les donn&eacute;es de l&apos;entreprise</h3>
+                </div>
+                <div class="ac-matrix">
+
+                    <!-- AC31.01 -->
+                    <div class="ac-matrix-row">
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Code &amp; Intitul&eacute;</span>
+                            <span class="ac-matrix-code c1">AC31.01</span>
+                            <span class="ac-matrix-ac-title">Concevoir une BDD relationnelle complexe / entrepôt de données</span>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Livrable / Trace mat&eacute;rielle</span>
+                            <p class="ac-matrix-livrable">Script SQL DDL <code>boutique_db</code> &mdash; mod&egrave;le en &eacute;toile MySQL
+                            avec tables de faits (<code>Fact_Ventes</code>, <code>Fact_Reparations</code>, <code>Fact_Colis</code>)
+                            et 5 dimensions. MCD Merise valid&eacute;.</p>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">D&eacute;monstration r&eacute;flexive</span>
+                            <p class="ac-matrix-reflexion">J&apos;ai con&ccedil;u de A &agrave; Z un entrepôt de donn&eacute;es r&eacute;el pour
+                            un commerce multi-activit&eacute;s, en choisissant le <strong>mod&egrave;le en &eacute;toile</strong> pour
+                            optimiser les requ&ecirc;tes analytiques Power BI et r&eacute;duire les jointures.</p>
+                        </div>
+                    </div>
+
+                    <!-- AC31.02 -->
+                    <div class="ac-matrix-row">
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Code &amp; Intitul&eacute;</span>
+                            <span class="ac-matrix-code c1">AC31.02</span>
+                            <span class="ac-matrix-ac-title">Assurer la qualit&eacute;, la fiabilit&eacute; et la gouvernance des donn&eacute;es</span>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Livrable / Trace mat&eacute;rielle</span>
+                            <p class="ac-matrix-livrable">Table de quarantaine <code>quarantaine_rejets</code> isol&eacute;e dans
+                            Apache Hop &mdash; <strong>226 erreurs de saisie</strong> identifi&eacute;es, typ&eacute;es et
+                            document&eacute;es (codes article manquants, dates nulles, montants n&eacute;gatifs).</p>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">D&eacute;monstration r&eacute;flexive</span>
+                            <p class="ac-matrix-reflexion">Face &agrave; des donn&eacute;es r&eacute;elles d&eacute;grad&eacute;es, j&apos;ai mis en place
+                            une <strong>strat&eacute;gie de gouvernance en 3 niveaux</strong> : nettoyage automatique
+                            par r&egrave;gles Regex, quarantaine des cas ambigu&euml;s, rapport de qualit&eacute; pour le dirigeant.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- COMPÉTENCE 2 : Développer des pipelines -->
+            <div class="ac-competence-block reveal">
+                <div class="ac-competence-header c2">
+                    <span class="ac-competence-pill c2">C2</span>
+                    <h3 class="ac-competence-title">D&eacute;velopper des applications d&eacute;cisionnelles &amp; pipelines ETL</h3>
+                </div>
+                <div class="ac-matrix">
+
+                    <!-- AC32.01 -->
+                    <div class="ac-matrix-row">
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Code &amp; Intitul&eacute;</span>
+                            <span class="ac-matrix-code c2">AC32.01</span>
+                            <span class="ac-matrix-ac-title">&Eacute;laborer et optimiser des pipelines d&apos;int&eacute;gration de donn&eacute;es</span>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Livrable / Trace mat&eacute;rielle</span>
+                            <p class="ac-matrix-livrable">Pipelines Apache Hop <code>pipeline_vente.hpl</code>,
+                            <code>pipeline_reparation.hpl</code>, <code>pipeline_colis.hpl</code> &mdash;
+                            transformations Regex, typage strict, filtres conditionnels <em>Filter Rows</em>.</p>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">D&eacute;monstration r&eacute;flexive</span>
+                            <p class="ac-matrix-reflexion">J&apos;ai con&ccedil;u 3 pipelines sp&eacute;cialis&eacute;s plut&ocirc;t qu&apos;un
+                            pipeline g&eacute;n&eacute;rique, pour <strong>isoler les logiques m&eacute;tier</strong> (vente
+                            &ne; r&eacute;paration &ne; colis) et faciliter la maintenance &agrave; long terme.</p>
+                        </div>
+                    </div>
+
+                    <!-- AC32.02 -->
+                    <div class="ac-matrix-row">
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Code &amp; Intitul&eacute;</span>
+                            <span class="ac-matrix-code c2">AC32.02</span>
+                            <span class="ac-matrix-ac-title">Automatiser les traitements et l&apos;orchestration des flux</span>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Livrable / Trace mat&eacute;rielle</span>
+                            <p class="ac-matrix-livrable">Workflow ma&icirc;tre <code>main_workflow.hwf</code> cha&icirc;nant
+                            les 3 pipelines avec gestion des erreurs, logs et contr&ocirc;les de flux
+                            conditionnels dans Apache Hop.</p>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">D&eacute;monstration r&eacute;flexive</span>
+                            <p class="ac-matrix-reflexion">L&apos;orchestration par workflow ma&icirc;tre permet au g&eacute;rant
+                            de <strong>d&eacute;clencher toute la cha&icirc;ne ETL en un clic</strong>, sans expertise
+                            technique. C&apos;est une d&eacute;cision d&apos;architecture orient&eacute;e utilisateur final.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- COMPÉTENCE 3 : Analyser et piloter -->
+            <div class="ac-competence-block reveal">
+                <div class="ac-competence-header c3">
+                    <span class="ac-competence-pill c3">C3</span>
+                    <h3 class="ac-competence-title">Analyser et piloter l&apos;activit&eacute; de l&apos;entreprise</h3>
+                </div>
+                <div class="ac-matrix">
+
+                    <!-- AC33.01 -->
+                    <div class="ac-matrix-row">
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Code &amp; Intitul&eacute;</span>
+                            <span class="ac-matrix-code c3">AC33.01</span>
+                            <span class="ac-matrix-ac-title">Construire des tableaux de bord d&eacute;cisionnels interactifs</span>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Livrable / Trace mat&eacute;rielle</span>
+                            <p class="ac-matrix-livrable">Dashboard Power BI 4 pages (<em>Vue Globale, Ventes, Atelier,
+                            Colis</em>), table de mesures <code>_Mesures</code> (DAX), slicers
+                            dynamiques par p&eacute;riode, produit, technicien.</p>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">D&eacute;monstration r&eacute;flexive</span>
+                            <p class="ac-matrix-reflexion">J&apos;ai structur&eacute; les mesures DAX dans une <strong>table
+                            d&eacute;di&eacute;e <code>_Mesures</code></strong> pour centraliser la logique
+                            m&eacute;tier et garantir la coh&eacute;rence des KPI sur toutes les pages.</p>
+                        </div>
+                    </div>
+
+                    <!-- AC33.02 -->
+                    <div class="ac-matrix-row">
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Code &amp; Intitul&eacute;</span>
+                            <span class="ac-matrix-code c3">AC33.02</span>
+                            <span class="ac-matrix-ac-title">Restituer la valeur m&eacute;tier et guider la prise de d&eacute;cision</span>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">Livrable / Trace mat&eacute;rielle</span>
+                            <p class="ac-matrix-livrable">Rapport final de data storytelling : analyse Marge vs Volume,
+                            ROI de <strong>~200h/an</strong> &eacute;conomis&eacute;es, levier
+                            <strong>Web-to-Store Google Business Profile (+1&nbsp;000 vues)</strong>,
+                            pr&eacute;conisations Mondial Relay valid&eacute;es.</p>
+                        </div>
+                        <div class="ac-matrix-cell">
+                            <span class="ac-matrix-cell-label">D&eacute;monstration r&eacute;flexive</span>
+                            <p class="ac-matrix-reflexion">Au-del&agrave; du tableau de bord, j&apos;ai pr&eacute;sent&eacute; une
+                            <strong>analyse strat&eacute;gique</strong> au dirigeant&nbsp;: identification des
+                            produits &agrave; forte marge, segmentation des tranches horaires
+                            rentables et optimisation du partenaire logistique.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
         <!-- ================================================================ -->
@@ -506,6 +732,77 @@
                 <hr class="exp-sep">
 
             </div>
+
+            <!-- ============================================================ -->
+            <!-- MONTÉE EN COMPÉTENCES S4 → S6                               -->
+            <!-- ============================================================ -->
+            <div class="progression-section">
+                <div class="progression-header">
+                    <h3 class="progression-arrow">
+                        Mont&eacute;e en comp&eacute;tences
+                        <span class="arrow-icon">&rarr;</span>
+                        S4 &rarr; S6
+                    </h3>
+                </div>
+
+                <div class="progression-grid">
+
+                    <!-- Niveau S4 -->
+                    <div class="progression-card s4 reveal">
+                        <div class="progression-card-header">
+                            <span class="progression-level-tag">S4 &mdash; 2024&ndash;2025</span>
+                            <span class="progression-level-title">Niveau Apprentissage</span>
+                        </div>
+                        <div class="progression-card-body">
+                            <div class="progression-item">
+                                <span>Bases relationnelles standard (Oracle SQL, PowerDesigner, HFSQL)</span>
+                            </div>
+                            <div class="progression-item">
+                                <span>Donn&eacute;es <strong>p&eacute;dagogiques</strong> propres (Adventure Works, jeux de tests)</span>
+                            </div>
+                            <div class="progression-item">
+                                <span>Dashboards Power BI sur donn&eacute;es simul&eacute;es (Adventure Works 150k commandes)</span>
+                            </div>
+                            <div class="progression-item">
+                                <span>D&eacute;veloppement web applicatif (React, Flask, API REST)</span>
+                            </div>
+                            <div class="progression-item">
+                                <span>Remont&eacute;e de besoins client en contexte <strong>stage S4 (CoodeX)</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Niveau S6 -->
+                    <div class="progression-card s6 reveal">
+                        <div class="progression-card-header">
+                            <span class="progression-level-tag">S6 &mdash; 2026</span>
+                            <span class="progression-level-title">Niveau Expertise Junior</span>
+                        </div>
+                        <div class="progression-card-body">
+                            <div class="progression-item">
+                                <span>Mod&eacute;lisation d&eacute;cisionnelle en &eacute;toile (<strong>boutique_db</strong>) sur donn&eacute;es <strong>r&eacute;elles multi-sources</strong></span>
+                            </div>
+                            <div class="progression-item">
+                                <span>Gouvernance de donn&eacute;es d&eacute;grad&eacute;es : isolation des <strong>226 erreurs</strong> dans <code>quarantaine_rejets</code></span>
+                            </div>
+                            <div class="progression-item">
+                                <span>Pipelines ETL automatis&eacute;s (Apache Hop) orchestr&eacute;s par workflow ma&icirc;tre</span>
+                            </div>
+                            <div class="progression-item">
+                                <span>Dashboard Power BI op&eacute;rationnel pour le <strong>pilotage quotidien</strong> du dirigeant</span>
+                            </div>
+                            <div class="progression-item">
+                                <span>Aide &agrave; la d&eacute;cision strat&eacute;gique : ROI ~200h/an, levier Web-to-Store, pr&eacute;conisations Mondial Relay</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
         </section>
 
 
@@ -571,6 +868,7 @@
     </div>
 
     <script src="js/portfolio.js"></script>
+    <script src="js/aged.js"></script>
 </body>
 
 </html>
